@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="RuntimeConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=MIDHIS01;Initial Catalog=Runtime;Persist Security Info=True;User ID=wwUser;Password=wwuser&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=MIDHIS01;Initial Catalog=Runtime;Persist Security Info=True;User ID=wwUser;Password=wwuser</Value>
+    </Setting>
+    <Setting Name="DownTimeDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\FSMIDLOCMT01\Data\Reliability Dep\Reliability\DownTime.mdb</Value>
+    </Setting>
+    <Setting Name="DBPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bWFydGlubWFyaWV0dGEwMQ==</Value>
+    </Setting>
+    <Setting Name="TagServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MIDHIS01</Value>
+    </Setting>
+    <Setting Name="TagServerUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wwUser</Value>
+    </Setting>
+    <Setting Name="TagServerPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">d3d1c2Vy</Value>
+    </Setting>
+    <Setting Name="LDMSServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10.1.175.4</Value>
+    </Setting>
+    <Setting Name="LDMSUserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">qesread</Value>
+    </Setting>
+    <Setting Name="LDMSPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">cWVzcmVhZA==</Value>
+    </Setting>
+    <Setting Name="LDMS7_MIDConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.175.4;Initial Catalog="LDMS7 MID";Persist Security Info=True;User ID=qesread;Password=qesread&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.1.175.4;Initial Catalog="LDMS7 MID";Persist Security Info=True;User ID=qesread;Password=qesread</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
