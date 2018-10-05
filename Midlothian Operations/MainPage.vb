@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices 'APIs For System Events
 Imports DevExpress.XtraBars.Navigation
 Imports System.Xml
 
-Public Class Form1
+Public Class MainPage
 
     Public Enum EXECUTION_STATE As UInteger ' Determine Monitor State
         ES_AWAYMODE_REQUIRED = &H40
@@ -72,46 +72,46 @@ Public Class Form1
         Dim ParamFM4 As New BGWArguments() With {.Chart = FM4Chart, .DaTable = DTBFM4}
         Dim ParamFM5 As New BGWArguments() With {.Chart = FM5Chart, .DaTable = DTBFM5}
 
-        If BGW1.IsBusy = False Then
+        If BGW1.IsBusy = False And My.Settings.RMTrendActive = True Then
 
             BGW1.RunWorkerAsync(ParamVRM)
         End If
 
-        If BGW2.IsBusy = False Then
+        If BGW2.IsBusy = False And My.Settings.FM6_2TrendActive = True Then
             BGW2.RunWorkerAsync(ParamFM6_2)
         End If
-        If BGW3.IsBusy = False Then
+        If BGW3.IsBusy = False And My.Settings.FM6_1TrendActive = True Then
             BGW3.RunWorkerAsync(ParamFM6_1)
         End If
-        If BGW4.IsBusy = False Then
+        If BGW4.IsBusy = False And My.Settings.KilnTrendActive = True Then
             BGW4.RunWorkerAsync(ParamKiln)
         End If
-        If BGW5.IsBusy = False Then
+        If BGW5.IsBusy = False And My.Settings.CoolerTrendActive Then
             BGW5.RunWorkerAsync(ParamCooler)
         End If
-        If BGW6.IsBusy = False Then
+        If BGW6.IsBusy = False And My.Settings.PHTTrendActive = True Then
             BGW6.RunWorkerAsync(ParamPHT)
         End If
-        If BGW7.IsBusy = False Then
+        If BGW7.IsBusy = False And My.Settings.FM1TrendActive = True Then
             BGW7.RunWorkerAsync(ParamFM1)
         End If
-        If BGW8.IsBusy = False Then
+        If BGW8.IsBusy = False And My.Settings.FM2TrendActive = True Then
             BGW8.RunWorkerAsync(ParamFM2)
         End If
-        If BGW9.IsBusy = False Then
+        If BGW9.IsBusy = False And My.Settings.FM3TrendActive = True Then
             BGW9.RunWorkerAsync(ParamFM3)
         End If
-        If BGW10.IsBusy = False Then
+        If BGW10.IsBusy = False And My.Settings.FM4TrendActive = True Then
             BGW10.RunWorkerAsync(ParamFM4)
         End If
-        If BGW12.IsBusy = False Then
+        If BGW12.IsBusy = False And My.Settings.FM5TrendActive = True Then
             BGW12.RunWorkerAsync(ParamFM5)
         End If
     End Sub
 
     Private Sub UpdateChart(Tags As DataTable, Charts As ChartControl)
 
-        Dim  DTBValues As DataTable = GetValuesfromServer(Tags)
+        Dim DTBValues As DataTable = GetValuesfromServer(Tags)
         Dim X As Integer = 0
         For Each Value In DTBValues.Rows
             Call AddPointstoChart(Charts, X, Now(), Value(2))
@@ -364,6 +364,20 @@ Public Class Form1
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'LDMS7_MIDDataSet.LabData_FinishMill' table. You can move, or remove it, as needed.
+        BarCheckItem1.Checked = My.Settings.FM6_1TrendActive
+        BarCheckItem2.Checked = My.Settings.FM6_2TrendActive
+        BarCheckItem3.Checked = My.Settings.RMTrendActive
+        BarCheckItem4.Checked = My.Settings.KilnTrendActive
+        BarCheckItem5.Checked = My.Settings.PHTTrendActive
+        BarCheckItem6.Checked = My.Settings.CoolerTrendActive
+        BarCheckItem7.Checked = My.Settings.FM1TrendActive
+        BarCheckItem8.Checked = My.Settings.FM2TrendActive
+        BarCheckItem9.Checked = My.Settings.FM3TrendActive
+        BarCheckItem10.Checked = My.Settings.FM4TrendActive
+        BarCheckItem11.Checked = My.Settings.FM5TrendActive
+        BarCheckItem12.Checked = My.Settings.QualityTrendActive
+
+
 
 
         Call KeepMonitorActive()
@@ -500,6 +514,7 @@ Public Class Form1
         Call GenerateChartSeries(DTBFM5, FM5Chart)
         Call GenerateChartSeries(DTBFM6_1, FM6Chart)
         Call GenerateChartSeries(DTBFM6_2, FM6Chart2)
+        Call GenerateChartSeries(DTBHistorian, ChartHistorian)
 
     End Sub
     Public Sub UpdateSingleSeries(Cchart As ChartControl, SNameNew As String, SNameOld As String, SMax As Double, SMin As Double, SColor As Color)
@@ -788,6 +803,22 @@ Public Class Form1
 
     End Sub
 
+    Private Function GetHistorianData(Tags As String) As DataTable
+
+        Dim QDataSet As New DataTable
+        Dim MyCommand As New SqlCommand
+        Dim QString As String = String.Format("SELECT * FROM OPENQUERY(INSQL,'SELECT DateTime, A411SI1_FT01, A431FN1M01_SI01, A432RF6M01_HIK01, A481VT1_FI01, A461KL1M01_II01, A481PW1_FI01, A481PW2_FI01, A481PW3_FI01, A441VT1_FI01_CFH, A351AF3M01_SI01, A351AN1_FO01, A361HS1_VI01, A361RM1_PI01, A361SR1M01_SI01, A541BE1M01_JI01, A541BM1_TI01, A541BM1M01_JI01, A541GO1_LI01, A541SR1M01_SI01, A541WS1_FI01, FMFDTOTAL, A434AN1_AI03_LB_HR, A434AN1_AI02_LB_HR, A434AN1_THC_LB_TN_CKR_1MIN, A434AN1_CO_LB_TN_CKR_1MIN, wwRowCount, wwRetrievalMode, wwResolution, wwCycleCount FROM Runtime.dbo.WideHistory WHERE A481PW1_FI01 > -20 AND wwCycleCount = {2} AND DateTime >= dateadd(hour,-120,GetDate())')", "AVERAGE", # 10/1/2018 #, 120)
+
+
+        Dim SQLADAPT As SqlDataAdapter = New SqlDataAdapter(QString, sqlConnection1)
+
+        SQLADAPT.Fill(QDataSet)
+
+        Return QDataSet
+
+    End Function
+
+
     Private Function GetValuesfromServer(DTBInput As DataTable) As DataTable
         ' Create Connections
         Dim sqlConnectionBGW As New SqlConnection(String.Format("Data Source={0};Initial Catalog=Runtime;Persist Security Info=True;User ID={1}; password={2}", ConfPerm.TagServer, ConfPerm.TagServerUserName, DecryptHSA256(ConfPerm.TagServerPassword)))
@@ -822,8 +853,8 @@ Public Class Form1
             For Each Row In DTBInput.Rows
 
                 RR = Result.NewRow()
-                    RR("TagName") = Row(0).ToString
-                    RR("Series_Name") = Row(2).ToString
+                RR("TagName") = Row(0).ToString
+                RR("Series_Name") = Row(2).ToString
                 If Row(1).ToString = "Wonderware" Then
                     RR("Value") = GetValuefromServer(Row(0).ToString, sqlConnectionBGW) 'Row(0) is the tagname
                 Else
@@ -880,20 +911,60 @@ Public Class Form1
         'Gets the most recent value for a single Tag in the wonderware system
         Dim readerBGW As SqlDataReader
         Dim cmdBGWLDMS As New SqlCommand
+        Dim Equip As String = ""  ' To determine the table to use
+        Dim Source As String = "" ' To determine the source to use
+        Dim ProductType As String = ""
+        Dim Value As String = "" ' The value to be returned on the selected table and source
         Dim Result As Double = 0
-        If sqlConnectionBGWLDMS.State = ConnectionState.Closed Then
-            Return 0
-        End If
+        'If sqlConnectionBGWLDMS.State = ConnectionState.Closed Then
+        '    Return 0
+        'End If
+        Dim ch As String
+        Dim X As Integer = 1
+
+        Do
+
+            Equip = Equip & Mid(Tagname, X, 1)
+            X = X + 1
+        Loop Until Mid(Tagname, X, 1) = "\" Or Mid(Tagname, X, 1) = "-" Or X > Tagname.Length
+
+        X = X + 1
+        Do
+            ch = Mid(Tagname, X, 1)
+            Source = Source & ch
+            X = X + 1
+        Loop Until Mid(Tagname, X, 1) = "\" Or Mid(Tagname, X, 1) = "-" Or X > Tagname.Length
+        X = X + 1
+        Do
+            ch = Mid(Tagname, X, 1)
+            ProductType = ProductType & ch
+            X = X + 1
+        Loop Until Mid(Tagname, X, 1) = "\" Or Mid(Tagname, X, 1) = "-" Or X > Tagname.Length
+        X = X + 1
+        Do
+            ch = Mid(Tagname, X, 1)
+            Value = Value & ch
+            X = X + 1
+        Loop Until X > Tagname.Length
 
         Try
             cmdBGWLDMS.CommandType = CommandType.Text
             cmdBGWLDMS.Connection = sqlConnectionBGWLDMS
-            cmdBGWLDMS.CommandText = String.Format("SELECT      TOP (2) LabData_FinishMill.SampleId, LabData_FinishMill.Source, LabData_FinishMill.ProductType, LabData_FinishMill.SampleTime, LabData_FinishMill.Mesh325, 
-                                                                LabData_FinishMill.Blaine, InstData_XRay.C3S, InstData_XRay.SO3, LabData_FinishMill.FreelimeTitration
-                                                    FROM        LabData_FinishMill INNER JOIN
-                                                                InstData_XRay ON LabData_FinishMill.SampleId = InstData_XRay.SampleID
-                                                    WHERE       (LabData_FinishMill.Source = N'FM6')
-                                                    ORDER BY    LabData_FinishMill.SampleTime DESC")
+
+            Select Case Equip
+                Case "FinishMill"
+                    cmdBGWLDMS.CommandText = String.Format("Select      TOP (2) LabData_{0}.SampleId, LabData_{0}.Source, LabData_{0}.ProductType, LabData_{0}.SampleTime, {2} 
+                                                                FROM        LabData_{0} INNER JOIN
+                                                                InstData_XRay ON LabData_{0}.SampleId = InstData_XRay.SampleID
+                                                    WHERE       (LabData_{0}.Source = N'{1}' AND LabData_{0}.ProductType = N'{3}')
+                                                    ORDER BY    LabData_{0}.SampleTime DESC", Equip, Source, Value, ProductType)
+                Case Else
+                    cmdBGWLDMS.CommandText = String.Format("Select      TOP (2) LabData_{0}.SampleId, LabData_{0}.Source, LabData_{0}.ProductType, LabData_{0}.SampleTime, {1} 
+                                                                FROM        LabData_{0} INNER JOIN
+                                                                InstData_XRay ON LabData_{0}.SampleId = InstData_XRay.SampleID
+                                                    ORDER BY    LabData_{0}.SampleTime DESC", Equip, Value)
+            End Select
+
             readerBGW = cmdBGWLDMS.ExecuteReader()
             readerBGW.Read()
         Catch ex As Exception
@@ -901,11 +972,11 @@ Public Class Form1
         End Try
 
         Try
-            Result = Math.Round(readerBGW.GetDouble(5), 2)
+            Result = Math.Round(readerBGW.GetDouble(4), 2)
 
             If Result = 0 Then
                 readerBGW.Read()
-                Result = Math.Round(readerBGW.GetDouble(5), 2)
+                Result = Math.Round(readerBGW.GetDouble(4), 2)
             End If
         Catch ex As Exception
             readerBGW.Close()
@@ -1034,7 +1105,7 @@ Public Class Form1
 
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem1.ItemClick
         'Edit Trends Button
-        Dim A As New HistorianProperties
+        Dim A As New ChartBuilder
         A.Show()
     End Sub
 
@@ -1058,6 +1129,176 @@ Public Class Form1
         Me.Close()
     End Sub
 
+
+
+
+
+    Private Sub BarCheckItem1_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem1.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem2_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem2.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem3_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem3.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem4_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem4.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem5_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem5.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem6_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem6.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem7_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem7.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem8_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem8.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem9_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem9.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem10_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem10.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem11_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem11.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub BarCheckItem12_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarCheckItem12.ItemClick
+        Call SaveActiveChartsSettings()
+    End Sub
+
+    Private Sub SaveActiveChartsSettings()
+        My.Settings.FM6_1TrendActive = BarCheckItem1.Checked
+        My.Settings.FM6_2TrendActive = BarCheckItem2.Checked
+        My.Settings.RMTrendActive = BarCheckItem3.Checked
+        My.Settings.KilnTrendActive = BarCheckItem4.Checked
+        My.Settings.PHTTrendActive = BarCheckItem5.Checked
+        My.Settings.CoolerTrendActive = BarCheckItem6.Checked
+        My.Settings.FM1TrendActive = BarCheckItem7.Checked
+        My.Settings.FM2TrendActive = BarCheckItem8.Checked
+        My.Settings.FM3TrendActive = BarCheckItem9.Checked
+        My.Settings.FM4TrendActive = BarCheckItem10.Checked
+        My.Settings.FM5TrendActive = BarCheckItem11.Checked
+        My.Settings.QualityTrendActive = BarCheckItem12.Checked
+
+    End Sub
+
+    Private Sub BarButtonItem8_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem8.ItemClick
+        Dim AST As new DataTable
+
+        AST.Columns.Add(New DataColumn("DateTime", Type.GetType("System.DateTime")))
+        AST.Columns.Add(New DataColumn("TAG1", Type.GetType("System.Double")))
+        AST.Columns.Add(New DataColumn("TAG2", Type.GetType("System.Double")))
+        AST.Columns.Add(New DataColumn("TAG3", Type.GetType("System.Double")))
+        Dim X As Integer = -1
+        Dim RandomNumb As New Random
+        Do
+            Dim dr As DataRow = AST.NewRow()
+            dr("DateTime") = DateAdd(DateInterval.Minute, X, Now())
+            dr("TAG1") = RandomNumb.NextDouble * 10000
+            dr("TAG2") = RandomNumb.NextDouble * 1000
+            dr("TAG3") = RandomNumb.NextDouble * 100
+
+            AST.Rows.Add(dr)
+            X = X - 1
+        Loop Until X <= -120
+
+
+        Call GenerateHistorianChart(AST, DTBHistorian)
+
+    End Sub
+
+    Private Sub GenerateHistorianChart(Source As DataTable, HistorianConfig As DataTable)
+
+        Dim DD As SwiftPlotDiagram = ChartHistorian.Diagram
+        DD.SecondaryAxesY.Clear()
+        ChartHistorian.Series.Clear()
+
+        ChartHistorian.DataSource = Nothing
+        ChartHistorian.DataSource = Source
+        For Each column As DataColumn In Source.Columns
+            If column.ColumnName <> "DateTime" Then
+                Dim FoundinHistorianRows() As Data.DataRow = HistorianConfig.Select(String.Format("TagName = '{0}'", column.ColumnName))
+                Dim SName As String = FoundinHistorianRows(0).Item("Series_Name")
+                Dim NS As New Series(SName, ViewType.SwiftPlot)
+                Dim diagram As SwiftPlotDiagram
+                Dim SColor As Color = Color.FromArgb(CType(FoundinHistorianRows(0).Item("Color"), Integer))
+                Dim SMax As Integer = FoundinHistorianRows(0).Item("Max")
+                Dim SMin As Integer = FoundinHistorianRows(0).Item("Min")
+
+                If column.ColumnName <> FoundinHistorianRows(0).Item("TagName") Then
+                    MsgBox("Shit.... something went wrong.... crap!...  :-( ", vbCritical, "Shit Happens!")
+                    Exit Sub
+                End If
+
+                'Set the colors
+                NS.Visible = True
+                NS.View.Color = SColor
+                ChartHistorian.Series.Add(NS)
+                If ChartHistorian.Series.Count = 1 Then
+                    'Add the series and configure primary Y axis
+
+                    ChartHistorian.Series(SName).View.Color = SColor
+                    diagram = ChartHistorian.Diagram
+                    diagram.AxisY.VisualRange.Auto = False
+                    diagram.AxisY.Color = SColor
+                    diagram.AxisY.WholeRange.Auto = False
+                    diagram.AxisY.WholeRange.MaxValue = SMax
+                    diagram.AxisY.WholeRange.MinValue = SMin
+                    diagram.AxisY.VisualRange.MaxValue = SMax
+                    diagram.AxisY.VisualRange.MinValue = SMin
+                    diagram.AxisY.WholeRange.SideMarginsValue = 0
+                    diagram.AxisY.VisualRange.SideMarginsValue = 0
+                    diagram.Margins.Left = 0
+                    diagram.Margins.Right = 0
+
+
+                Else
+                    'Create Secondary Y Axis and it's properties.
+                    Dim SAxis As New SwiftPlotDiagramSecondaryAxisY(SName)
+                    SAxis.Color = SColor
+                    SAxis.WholeRange.Auto = False
+                    SAxis.VisualRange.Auto = False
+                    SAxis.WholeRange.MaxValue = SMax
+                    SAxis.WholeRange.MinValue = SMin
+                    SAxis.VisualRange.MaxValue = SMax
+                    SAxis.VisualRange.MinValue = SMin
+                    SAxis.WholeRange.SideMarginsValue = 0
+                    SAxis.VisualRange.SideMarginsValue = 0
+                    SAxis.Alignment = AxisAlignment.Near
+                    'Set secondary axis for this series
+                    CType(ChartHistorian.Diagram, SwiftPlotDiagram).SecondaryAxesY.Add(SAxis)
+                    'Add the series to the chart
+                    CType(ChartHistorian.Series(SName).View, SwiftPlotSeriesView).AxisY = SAxis
+                End If
+                'Set the series properties
+                ChartHistorian.Series(SName).ArgumentScaleType = ScaleType.DateTime
+                ChartHistorian.Series(SName).ArgumentDataMember = "DateTime"
+                ChartHistorian.Series(SName).ValueScaleType = ScaleType.Numerical
+                ChartHistorian.Series(SName).ValueDataMembers.AddRange(New String() {column.ColumnName})
+                ChartHistorian.Series(SName).View.Color = SColor
+
+
+
+
+            End If
+        Next
+
+    End Sub
 
 End Class
 

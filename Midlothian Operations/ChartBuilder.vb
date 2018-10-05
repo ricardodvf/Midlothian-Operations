@@ -1,5 +1,5 @@
 ﻿Imports System.Xml
-Public Class HistorianProperties
+Public Class ChartBuilder
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         'Click AddPoint
         ErrorProvider1.Clear()
@@ -45,7 +45,7 @@ Public Class HistorianProperties
         End If
 
         Dim Arr As String() = New String(6) {}
-        Dim itm As ListViewItem
+        'Dim itm As ListViewItem
         'add items to ListView
         Dim CSystem As String
         If RadioButton1.Checked = True Then
@@ -56,34 +56,34 @@ Public Class HistorianProperties
 
         Call AddItemtoListView(TextBox1.Text, CSystem, TextBox2.Text, ColorPickEdit1.Color.ToArgb.ToString, TextBox3.Text, TextBox4.Text)
         Call Save()
-        Call Form1.LoadTrendsSettings()
+        Call MainPage.LoadTrendsSettings()
 
         Select Case RadioGroup1.SelectedIndex
             Case 0
-                Call Form1.AddSingleSeries(Form1.ChartHistorian, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.ChartHistorian, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 1
                 'RawMill
-                Call Form1.AddSingleSeries(Form1.VRMChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.VRMChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 2
-                Call Form1.AddSingleSeries(Form1.PHTChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.PHTChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 3
-                Call Form1.AddSingleSeries(Form1.KilnChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.KilnChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 4
-                Call Form1.AddSingleSeries(Form1.CoolerChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.CoolerChart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 5
-                Call Form1.AddSingleSeries(Form1.FM1Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM1Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 6
-                Call Form1.AddSingleSeries(Form1.FM2Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM2Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 7
-                Call Form1.AddSingleSeries(Form1.FM3Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM3Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 8
-                Call Form1.AddSingleSeries(Form1.FM4Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM4Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 9
-                Call Form1.AddSingleSeries(Form1.FM5Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM5Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 10
-                Call Form1.AddSingleSeries(Form1.FM6Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM6Chart, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             Case 11
-                Call Form1.AddSingleSeries(Form1.FM6Chart2, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                Call MainPage.AddSingleSeries(MainPage.FM6Chart2, TextBox2.Text, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
         End Select
 
 
@@ -109,12 +109,15 @@ Public Class HistorianProperties
 
 
     Private Sub HistorianProperties_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         ColorPickEdit1.Color = Color.Red
         Call ReadXMLDataSet("Historian.xml")
 
     End Sub
 
-
+    Public Sub EnterTag(A As String)
+        TextBox1.Text = A
+    End Sub
 
 
 
@@ -127,7 +130,7 @@ Public Class HistorianProperties
         'Click OK Button
         Call Save()
 
-        Call Form1.LoadTrendsSettings()
+        Call MainPage.LoadTrendsSettings()
         Close()
     End Sub
 
@@ -242,28 +245,40 @@ Public Class HistorianProperties
             Select Case RadioGroup1.SelectedIndex
                 Case 0
                     ReadXMLDataSet("Historian.xml")
+
                 Case 1
                     ReadXMLDataSet("RawMill.xml")
+
                 Case 2
                     ReadXMLDataSet("PHT.xml")
+
                 Case 3
                     ReadXMLDataSet("Kiln.xml")
+
                 Case 4
                     ReadXMLDataSet("Cooler.xml")
+
                 Case 5
                     ReadXMLDataSet("FM1.xml")
+
                 Case 6
                     ReadXMLDataSet("FM2.xml")
+
                 Case 7
                     ReadXMLDataSet("FM3.xml")
+
                 Case 8
                     ReadXMLDataSet("FM4.xml")
+
                 Case 9
                     ReadXMLDataSet("FM5.xml")
+
                 Case 10
                     ReadXMLDataSet("FM6-1.xml")
+
                 Case 11
                     ReadXMLDataSet("FM6-2.xml")
+
             End Select
         Catch ex As Exception
             ListView1.Items.Clear()
@@ -283,9 +298,11 @@ Public Class HistorianProperties
             TextBox4.Text = ListView1.SelectedItems.Item(0).SubItems(5).Text
             ColorPickEdit1.Color = Color.FromArgb(CType(ListView1.SelectedItems.Item(0).SubItems(3).Text, Integer))
             If ListView1.SelectedItems.Item(0).SubItems(1).Text = "Wonderware" Then
-                RadioButton1.Enabled = True
+                RadioButton1.Checked = True
+                RadioButton2.Checked = False
             Else
-                RadioButton2.Enabled = True
+                RadioButton1.Checked = False
+                RadioButton2.Checked = True
             End If
 
         End If
@@ -300,36 +317,36 @@ Public Class HistorianProperties
 
                 Select Case RadioGroup1.SelectedIndex
                     Case 0
-                        Call Form1.DeleteSingleSeries(Form1.ChartHistorian, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.ChartHistorian, SNameOld)
                     Case 1
                         'RawMill
-                        Call Form1.DeleteSingleSeries(Form1.VRMChart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.VRMChart, SNameOld)
                     Case 2
-                        Call Form1.DeleteSingleSeries(Form1.PHTChart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.PHTChart, SNameOld)
                     Case 3
-                        Call Form1.DeleteSingleSeries(Form1.KilnChart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.KilnChart, SNameOld)
                     Case 4
-                        Call Form1.DeleteSingleSeries(Form1.CoolerChart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.CoolerChart, SNameOld)
                     Case 5
-                        Call Form1.DeleteSingleSeries(Form1.FM1Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM1Chart, SNameOld)
                     Case 6
-                        Call Form1.DeleteSingleSeries(Form1.FM2Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM2Chart, SNameOld)
                     Case 7
-                        Call Form1.DeleteSingleSeries(Form1.FM3Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM3Chart, SNameOld)
                     Case 8
-                        Call Form1.DeleteSingleSeries(Form1.FM4Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM4Chart, SNameOld)
                     Case 9
-                        Call Form1.DeleteSingleSeries(Form1.FM5Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM5Chart, SNameOld)
                     Case 10
-                        Call Form1.DeleteSingleSeries(Form1.FM6Chart, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM6Chart, SNameOld)
                     Case 11
-                        Call Form1.DeleteSingleSeries(Form1.FM6Chart2, SNameOld)
+                        Call MainPage.DeleteSingleSeries(MainPage.FM6Chart2, SNameOld)
                 End Select
 
                 ListView1.Items.Remove(ListView1.SelectedItems(0))
 
                 Call Save()
-                Call Form1.LoadTrendsSettings()
+                Call MainPage.LoadTrendsSettings()
 
 
 
@@ -345,6 +362,13 @@ Public Class HistorianProperties
         If ListView1.SelectedItems.Count > 0 Then
             Dim SNameOld As String = ListView1.SelectedItems.Item(0).SubItems(2).Text
             ListView1.SelectedItems.Item(0).SubItems(0).Text = TextBox1.Text
+            If RadioButton1.Checked = True Then
+                ListView1.SelectedItems.Item(0).SubItems(1).Text = "Wonderware"
+            Else
+                ListView1.SelectedItems.Item(0).SubItems(1).Text = "LDMS"
+            End If
+
+
             ListView1.SelectedItems.Item(0).SubItems(2).Text = TextBox2.Text
             ListView1.SelectedItems.Item(0).SubItems(4).Text = TextBox3.Text
             ListView1.SelectedItems.Item(0).SubItems(5).Text = TextBox4.Text
@@ -352,35 +376,53 @@ Public Class HistorianProperties
             ListView1.SelectedItems.Item(0).SubItems(3).BackColor = ColorPickEdit1.Color
             ListView1.SelectedItems.Item(0).SubItems(3).ForeColor = ColorPickEdit1.Color
             Call Save()
-            Call Form1.LoadTrendsSettings()
+            Call MainPage.LoadTrendsSettings()
 
             Select Case RadioGroup1.SelectedIndex
                 Case 0
-                    Call Form1.UpdateSingleSeries(Form1.ChartHistorian, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.ChartHistorian, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 1
                     'RawMill
-                    Call Form1.UpdateSingleSeries(Form1.VRMChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.VRMChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 2
-                    Call Form1.UpdateSingleSeries(Form1.PHTChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.PHTChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 3
-                    Call Form1.UpdateSingleSeries(Form1.KilnChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.KilnChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 4
-                    Call Form1.UpdateSingleSeries(Form1.CoolerChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.CoolerChart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 5
-                    Call Form1.UpdateSingleSeries(Form1.FM1Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM1Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 6
-                    Call Form1.UpdateSingleSeries(Form1.FM2Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM2Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 7
-                    Call Form1.UpdateSingleSeries(Form1.FM3Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM3Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 8
-                    Call Form1.UpdateSingleSeries(Form1.FM4Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM4Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 9
-                    Call Form1.UpdateSingleSeries(Form1.FM5Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM5Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 10
-                    Call Form1.UpdateSingleSeries(Form1.FM6Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM6Chart, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
                 Case 11
-                    Call Form1.UpdateSingleSeries(Form1.FM6Chart2, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
+                    Call MainPage.UpdateSingleSeries(MainPage.FM6Chart2, TextBox2.Text, SNameOld, TextBox3.Text, TextBox4.Text, ColorPickEdit1.Color)
             End Select
         End If
     End Sub
+
+    Private Sub SimpleButton5_Click_1(sender As Object, e As EventArgs) Handles SimpleButton5.Click
+
+        If RadioButton2.Checked = True Then
+            Dim A As New LDMSTagSelector
+            A.Show(Me)
+        Else
+            Dim A As New Wonderware_Tag_Selector
+            A.Show(Me)
+        End If
+
+
+    End Sub
+
+
+
+
+
 End Class

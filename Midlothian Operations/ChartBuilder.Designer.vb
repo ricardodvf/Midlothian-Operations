@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class HistorianProperties
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class ChartBuilder
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,17 +17,20 @@ Partial Class HistorianProperties
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HistorianProperties))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ChartBuilder))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton5 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         Me.ColorPickEdit1 = New DevExpress.XtraEditors.ColorPickEdit()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -37,8 +40,6 @@ Partial Class HistorianProperties
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -49,10 +50,10 @@ Partial Class HistorianProperties
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.RadioGroup1 = New DevExpress.XtraEditors.RadioGroup()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -72,7 +73,7 @@ Partial Class HistorianProperties
         Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(5, 20)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(178, 77)
+        Me.GroupBox1.Size = New System.Drawing.Size(268, 77)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tag Source"
@@ -101,25 +102,37 @@ Partial Class HistorianProperties
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.SimpleButton5)
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(7, 102)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(177, 77)
+        Me.GroupBox2.Size = New System.Drawing.Size(266, 77)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tag Name"
         '
+        'SimpleButton5
+        '
+        Me.SimpleButton5.Location = New System.Drawing.Point(189, 34)
+        Me.SimpleButton5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.SimpleButton5.Name = "SimpleButton5"
+        Me.SimpleButton5.Size = New System.Drawing.Size(64, 19)
+        Me.SimpleButton5.TabIndex = 1
+        Me.SimpleButton5.Text = "Browse"
+        '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(20, 30)
+        Me.TextBox1.Location = New System.Drawing.Point(13, 33)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(170, 20)
         Me.TextBox1.TabIndex = 0
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.SimpleButton2)
         Me.GroupBox3.Controls.Add(Me.ColorPickEdit1)
+        Me.GroupBox3.Controls.Add(Me.SimpleButton1)
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.TextBox4)
@@ -128,12 +141,21 @@ Partial Class HistorianProperties
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.TextBox2)
         Me.GroupBox3.Font = New System.Drawing.Font("Tahoma", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(198, 18)
+        Me.GroupBox3.Location = New System.Drawing.Point(279, 18)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(361, 162)
+        Me.GroupBox3.Size = New System.Drawing.Size(489, 162)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chart Options"
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Image = CType(resources.GetObject("SimpleButton2.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(333, 80)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(139, 34)
+        Me.SimpleButton2.TabIndex = 4
+        Me.SimpleButton2.Text = "Edit Selected Line"
         '
         'ColorPickEdit1
         '
@@ -144,6 +166,15 @@ Partial Class HistorianProperties
         Me.ColorPickEdit1.Properties.ShowWebSafeColors = True
         Me.ColorPickEdit1.Size = New System.Drawing.Size(227, 20)
         Me.ColorPickEdit1.TabIndex = 7
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(333, 121)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(139, 34)
+        Me.SimpleButton1.TabIndex = 3
+        Me.SimpleButton1.Text = "Add New Point"
         '
         'Label4
         '
@@ -204,10 +235,8 @@ Partial Class HistorianProperties
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.SimpleButton2)
         Me.GroupBox4.Controls.Add(Me.GroupBox1)
         Me.GroupBox4.Controls.Add(Me.GroupBox2)
-        Me.GroupBox4.Controls.Add(Me.SimpleButton1)
         Me.GroupBox4.Controls.Add(Me.GroupBox3)
         Me.GroupBox4.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(10, 212)
@@ -215,25 +244,7 @@ Partial Class HistorianProperties
         Me.GroupBox4.Size = New System.Drawing.Size(789, 184)
         Me.GroupBox4.TabIndex = 5
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Add New Tag"
-        '
-        'SimpleButton2
-        '
-        Me.SimpleButton2.Image = CType(resources.GetObject("SimpleButton2.Image"), System.Drawing.Image)
-        Me.SimpleButton2.Location = New System.Drawing.Point(576, 98)
-        Me.SimpleButton2.Name = "SimpleButton2"
-        Me.SimpleButton2.Size = New System.Drawing.Size(139, 34)
-        Me.SimpleButton2.TabIndex = 4
-        Me.SimpleButton2.Text = "Edit Selected Line"
-        '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(576, 140)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(139, 34)
-        Me.SimpleButton1.TabIndex = 3
-        Me.SimpleButton1.Text = "Add New Point"
+        Me.GroupBox4.Text = "Add or Modify a Series"
         '
         'GroupBox5
         '
@@ -310,15 +321,6 @@ Partial Class HistorianProperties
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'SimpleButton4
-        '
-        Me.SimpleButton4.Image = CType(resources.GetObject("SimpleButton4.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(649, 638)
-        Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(157, 34)
-        Me.SimpleButton4.TabIndex = 8
-        Me.SimpleButton4.Text = "OK"
-        '
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.RadioGroup1)
@@ -357,7 +359,16 @@ Partial Class HistorianProperties
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
-        'HistorianProperties
+        'SimpleButton4
+        '
+        Me.SimpleButton4.Image = CType(resources.GetObject("SimpleButton4.Image"), System.Drawing.Image)
+        Me.SimpleButton4.Location = New System.Drawing.Point(649, 638)
+        Me.SimpleButton4.Name = "SimpleButton4"
+        Me.SimpleButton4.Size = New System.Drawing.Size(157, 34)
+        Me.SimpleButton4.TabIndex = 8
+        Me.SimpleButton4.Text = "OK"
+        '
+        'ChartBuilder
         '
         Me.AcceptButton = Me.SimpleButton1
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -371,7 +382,7 @@ Partial Class HistorianProperties
         Me.Controls.Add(Me.SimpleButton4)
         Me.Controls.Add(Me.GroupBox5)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "HistorianProperties"
+        Me.Name = "ChartBuilder"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Chart Builder"
         Me.GroupBox1.ResumeLayout(False)
@@ -423,4 +434,5 @@ Partial Class HistorianProperties
     Friend WithEvents RadioGroup1 As DevExpress.XtraEditors.RadioGroup
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
 End Class

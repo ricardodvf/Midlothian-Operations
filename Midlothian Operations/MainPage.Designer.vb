@@ -7,7 +7,7 @@ Imports DevExpress.UserSkins
 
 
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class MainPage
     Inherits RibbonForm
 
     'Form overrides dispose to clean up the component list.
@@ -31,7 +31,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
         Dim GalleryItemGroup1 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
         Dim SpreadsheetCommandGalleryItem1 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
         Dim SpreadsheetCommandGalleryItem2 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
@@ -413,11 +413,26 @@ Partial Class Form1
         Me.RepositoryItemDateEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarCheckItem1 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem2 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem3 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem4 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem5 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem6 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem7 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem8 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem9 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem10 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem11 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem12 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
         Me.ribbonImageCollectionLarge = New DevExpress.Utils.ImageCollection(Me.components)
         Me.RibbonPageSkins = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.RepositoryItemFontEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemFontEdit()
         Me.RepositoryItemSpreadsheetFontSizeEdit1 = New DevExpress.XtraSpreadsheet.Design.RepositoryItemSpreadsheetFontSizeEdit()
@@ -469,6 +484,7 @@ Partial Class Form1
         Me.DigitalBackgroundLayerComponent10 = New DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent()
         Me.TabNavigationPage1 = New DevExpress.XtraBars.Navigation.TabNavigationPage()
         Me.FM6Chart2 = New DevExpress.XtraCharts.ChartControl()
+        Me.LDMS7_MIDDataSet = New Midlothian_Operations.LDMS7_MIDDataSet()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -581,7 +597,9 @@ Partial Class Form1
         Me.BGW10 = New System.ComponentModel.BackgroundWorker()
         Me.BGW11 = New System.ComponentModel.BackgroundWorker()
         Me.BGW12 = New System.ComponentModel.BackgroundWorker()
-        Me.LDMS7_MIDDataSet = New Midlothian_Operations.LDMS7_MIDDataSet()
+        Me.BarCheckItem13 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem14 = New DevExpress.XtraBars.BarCheckItem()
+        Me.BarCheckItem15 = New DevExpress.XtraBars.BarCheckItem()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollectionLarge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollection, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -645,6 +663,7 @@ Partial Class Form1
         CType(SwiftPlotDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM6Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -813,7 +832,6 @@ Partial Class Form1
         CType(Me.HistoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnalogHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnalogHistoryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BarAndDockingController1
@@ -872,19 +890,11 @@ Partial Class Form1
         '
         Me.navbarImageCollectionLarge.ImageStream = CType(resources.GetObject("navbarImageCollectionLarge.ImageStream"), DevExpress.Utils.ImageCollectionStreamer)
         Me.navbarImageCollectionLarge.TransparentColor = System.Drawing.Color.Transparent
-        Me.navbarImageCollectionLarge.Images.SetKeyName(0, "Mail_16x16.png")
-        Me.navbarImageCollectionLarge.Images.SetKeyName(1, "Organizer_16x16.png")
         '
         'navbarImageCollection
         '
         Me.navbarImageCollection.ImageStream = CType(resources.GetObject("navbarImageCollection.ImageStream"), DevExpress.Utils.ImageCollectionStreamer)
         Me.navbarImageCollection.TransparentColor = System.Drawing.Color.Transparent
-        Me.navbarImageCollection.Images.SetKeyName(0, "Inbox_16x16.png")
-        Me.navbarImageCollection.Images.SetKeyName(1, "Outbox_16x16.png")
-        Me.navbarImageCollection.Images.SetKeyName(2, "Drafts_16x16.png")
-        Me.navbarImageCollection.Images.SetKeyName(3, "Trash_16x16.png")
-        Me.navbarImageCollection.Images.SetKeyName(4, "Calendar_16x16.png")
-        Me.navbarImageCollection.Images.SetKeyName(5, "Tasks_16x16.png")
         '
         'ribbonControl
         '
@@ -894,18 +904,18 @@ Partial Class Form1
         Me.ribbonControl.Controller = Me.BarAndDockingController1
         Me.ribbonControl.ExpandCollapseItem.Id = 0
         Me.ribbonControl.Images = Me.ribbonImageCollection
-        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.iExit, Me.iHelp, Me.iAbout, Me.siStatus, Me.siInfo, Me.rgbiSkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarHeaderItem1, Me.DTPFrom, Me.DTPTo, Me.BarButtonItem6, Me.BarButtonItem7})
+        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.iExit, Me.iHelp, Me.iAbout, Me.siStatus, Me.siInfo, Me.rgbiSkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarHeaderItem1, Me.DTPFrom, Me.DTPTo, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarCheckItem1, Me.BarCheckItem2, Me.BarCheckItem3, Me.BarCheckItem4, Me.BarCheckItem5, Me.BarCheckItem6, Me.BarCheckItem7, Me.BarCheckItem8, Me.BarCheckItem9, Me.BarCheckItem10, Me.BarCheckItem11, Me.BarCheckItem12, Me.BarButtonItem8})
         Me.ribbonControl.LargeImages = Me.ribbonImageCollectionLarge
         Me.ribbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl.MaxItemId = 390
+        Me.ribbonControl.MaxItemId = 403
         Me.ribbonControl.Name = "ribbonControl"
         Me.ribbonControl.PageHeaderItemLinks.Add(Me.iAbout)
-        Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPageSkins})
+        Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPageSkins, Me.RibbonPage1})
         Me.ribbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemFontEdit1, Me.RepositoryItemSpreadsheetFontSizeEdit1, Me.RepositoryItemPopupGalleryEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2})
         Me.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010
         Me.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[True]
         Me.ribbonControl.ShowToolbarCustomizeItem = False
-        Me.ribbonControl.Size = New System.Drawing.Size(1921, 143)
+        Me.ribbonControl.Size = New System.Drawing.Size(1654, 143)
         Me.ribbonControl.StatusBar = Me.ribbonStatusBar
         Me.ribbonControl.Toolbar.ShowCustomizeItem = False
         '
@@ -929,21 +939,6 @@ Partial Class Form1
         'ribbonImageCollection
         '
         Me.ribbonImageCollection.ImageStream = CType(resources.GetObject("ribbonImageCollection.ImageStream"), DevExpress.Utils.ImageCollectionStreamer)
-        Me.ribbonImageCollection.Images.SetKeyName(0, "Ribbon_New_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(1, "Ribbon_Open_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(2, "Ribbon_Close_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(3, "Ribbon_Find_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(4, "Ribbon_Save_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(5, "Ribbon_SaveAs_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(6, "Ribbon_Exit_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(7, "Ribbon_Content_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(8, "Ribbon_Info_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(9, "Ribbon_Bold_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(10, "Ribbon_Italic_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(11, "Ribbon_Underline_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(12, "Ribbon_AlignLeft_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(13, "Ribbon_AlignCenter_16x16.png")
-        Me.ribbonImageCollection.Images.SetKeyName(14, "Ribbon_AlignRight_16x16.png")
         '
         'iHelp
         '
@@ -1018,9 +1013,7 @@ Partial Class Form1
         'BarButtonItem3
         '
         Me.BarButtonItem3.Caption = "Historian Configuration"
-        Me.BarButtonItem3.Glyph = CType(resources.GetObject("BarButtonItem3.Glyph"), System.Drawing.Image)
         Me.BarButtonItem3.Id = 382
-        Me.BarButtonItem3.LargeGlyph = CType(resources.GetObject("BarButtonItem3.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem3.Name = "BarButtonItem3"
         '
         'BarButtonItem4
@@ -1091,7 +1084,6 @@ Partial Class Form1
         'BarButtonItem6
         '
         Me.BarButtonItem6.Caption = "Start Real Time"
-        Me.BarButtonItem6.Glyph = CType(resources.GetObject("BarButtonItem6.Glyph"), System.Drawing.Image)
         Me.BarButtonItem6.Id = 388
         Me.BarButtonItem6.LargeGlyph = Global.Midlothian_Operations.My.Resources.Resources._033
         Me.BarButtonItem6.Name = "BarButtonItem6"
@@ -1100,24 +1092,107 @@ Partial Class Form1
         'BarButtonItem7
         '
         Me.BarButtonItem7.Caption = "Close Program"
-        Me.BarButtonItem7.Glyph = CType(resources.GetObject("BarButtonItem7.Glyph"), System.Drawing.Image)
         Me.BarButtonItem7.Id = 389
-        Me.BarButtonItem7.LargeGlyph = CType(resources.GetObject("BarButtonItem7.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem7.Name = "BarButtonItem7"
+        '
+        'BarCheckItem1
+        '
+        Me.BarCheckItem1.Caption = "Finish Mill # 6 -1"
+        Me.BarCheckItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem1.Id = 390
+        Me.BarCheckItem1.Name = "BarCheckItem1"
+        '
+        'BarCheckItem2
+        '
+        Me.BarCheckItem2.Caption = "Finish Mill # 6 - 2"
+        Me.BarCheckItem2.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem2.Id = 391
+        Me.BarCheckItem2.Name = "BarCheckItem2"
+        '
+        'BarCheckItem3
+        '
+        Me.BarCheckItem3.Caption = "Raw Mill"
+        Me.BarCheckItem3.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem3.Id = 392
+        Me.BarCheckItem3.Name = "BarCheckItem3"
+        '
+        'BarCheckItem4
+        '
+        Me.BarCheckItem4.Caption = "Kiln"
+        Me.BarCheckItem4.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem4.Id = 393
+        Me.BarCheckItem4.Name = "BarCheckItem4"
+        '
+        'BarCheckItem5
+        '
+        Me.BarCheckItem5.Caption = "PHT"
+        Me.BarCheckItem5.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem5.Id = 394
+        Me.BarCheckItem5.Name = "BarCheckItem5"
+        '
+        'BarCheckItem6
+        '
+        Me.BarCheckItem6.Caption = "Cooler"
+        Me.BarCheckItem6.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem6.Id = 395
+        Me.BarCheckItem6.Name = "BarCheckItem6"
+        '
+        'BarCheckItem7
+        '
+        Me.BarCheckItem7.Caption = "Finish Mill # 1"
+        Me.BarCheckItem7.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem7.Id = 396
+        Me.BarCheckItem7.Name = "BarCheckItem7"
+        '
+        'BarCheckItem8
+        '
+        Me.BarCheckItem8.Caption = "Finish Mill # 2"
+        Me.BarCheckItem8.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem8.Id = 397
+        Me.BarCheckItem8.Name = "BarCheckItem8"
+        '
+        'BarCheckItem9
+        '
+        Me.BarCheckItem9.Caption = "Finish Mill # 3"
+        Me.BarCheckItem9.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem9.Id = 398
+        Me.BarCheckItem9.Name = "BarCheckItem9"
+        '
+        'BarCheckItem10
+        '
+        Me.BarCheckItem10.Caption = "Finish Mill # 4"
+        Me.BarCheckItem10.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem10.Id = 399
+        Me.BarCheckItem10.Name = "BarCheckItem10"
+        Me.BarCheckItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'BarCheckItem11
+        '
+        Me.BarCheckItem11.Caption = "Finish Mill # 5"
+        Me.BarCheckItem11.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem11.Id = 400
+        Me.BarCheckItem11.Name = "BarCheckItem11"
+        '
+        'BarCheckItem12
+        '
+        Me.BarCheckItem12.Caption = "Quality"
+        Me.BarCheckItem12.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BarCheckItem12.Id = 401
+        Me.BarCheckItem12.Name = "BarCheckItem12"
+        '
+        'BarButtonItem8
+        '
+        Me.BarButtonItem8.Caption = "Historian Refresh"
+        Me.BarButtonItem8.Glyph = CType(resources.GetObject("BarButtonItem8.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem8.Id = 402
+        Me.BarButtonItem8.LargeGlyph = CType(resources.GetObject("BarButtonItem8.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem8.Name = "BarButtonItem8"
+        Me.BarButtonItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'ribbonImageCollectionLarge
         '
         Me.ribbonImageCollectionLarge.ImageSize = New System.Drawing.Size(32, 32)
         Me.ribbonImageCollectionLarge.ImageStream = CType(resources.GetObject("ribbonImageCollectionLarge.ImageStream"), DevExpress.Utils.ImageCollectionStreamer)
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(0, "Ribbon_New_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(1, "Ribbon_Open_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(2, "Ribbon_Close_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(3, "Ribbon_Find_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(4, "Ribbon_Save_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(5, "Ribbon_SaveAs_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(6, "Ribbon_Exit_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(7, "Ribbon_Content_32x32.png")
-        Me.ribbonImageCollectionLarge.Images.SetKeyName(8, "Ribbon_Info_32x32.png")
         '
         'RibbonPageSkins
         '
@@ -1146,6 +1221,30 @@ Partial Class Form1
         Me.RibbonPageGroup3.ItemLinks.Add(Me.BarButtonItem7)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.Text = "Close"
+        '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup4})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "Active Trends"
+        '
+        'RibbonPageGroup4
+        '
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem1)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem2)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem3)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem4)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem5)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem6)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem7)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem8)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem9)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem10)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem11)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem12)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem8)
+        Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
+        Me.RibbonPageGroup4.Text = "Active Trends for Real Time Update"
         '
         'RepositoryItemTextEdit1
         '
@@ -1260,10 +1359,10 @@ Partial Class Form1
         '
         Me.ribbonStatusBar.ItemLinks.Add(Me.siStatus)
         Me.ribbonStatusBar.ItemLinks.Add(Me.siInfo)
-        Me.ribbonStatusBar.Location = New System.Drawing.Point(0, 1045)
+        Me.ribbonStatusBar.Location = New System.Drawing.Point(0, 862)
         Me.ribbonStatusBar.Name = "ribbonStatusBar"
         Me.ribbonStatusBar.Ribbon = Me.ribbonControl
-        Me.ribbonStatusBar.Size = New System.Drawing.Size(1921, 31)
+        Me.ribbonStatusBar.Size = New System.Drawing.Size(1654, 31)
         '
         'CommandBarGalleryDropDown1
         '
@@ -2792,7 +2891,7 @@ Partial Class Form1
         Me.TabNavigationPage1.Controls.Add(Me.Label2)
         Me.TabNavigationPage1.Controls.Add(Me.Label1)
         Me.TabNavigationPage1.Name = "TabNavigationPage1"
-        Me.TabNavigationPage1.Size = New System.Drawing.Size(1903, 857)
+        Me.TabNavigationPage1.Size = New System.Drawing.Size(1636, 674)
         '
         'FM6Chart2
         '
@@ -2814,6 +2913,11 @@ Partial Class Form1
         Me.FM6Chart2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
         Me.FM6Chart2.Size = New System.Drawing.Size(1325, 288)
         Me.FM6Chart2.TabIndex = 47
+        '
+        'LDMS7_MIDDataSet
+        '
+        Me.LDMS7_MIDDataSet.DataSetName = "LDMS7_MIDDataSet"
+        Me.LDMS7_MIDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label27
         '
@@ -3026,7 +3130,6 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(1720, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(172, 82)
@@ -3527,9 +3630,9 @@ Partial Class Form1
         Me.CCh.Location = New System.Drawing.Point(0, 143)
         Me.CCh.Name = "CCh"
         Me.CCh.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.TabNavigationPage1, Me.TabNavigationPage2, Me.TabNavigationPage3, Me.TabNavigationPage5, Me.TabNavigationPage6, Me.TabNavigationPage7, Me.TabNavigationPage8, Me.TabNavigationPage9, Me.TabNavigationPage10, Me.TabNavigationPage11, Me.TabNavigationPage12, Me.TabNavigationPage4})
-        Me.CCh.RegularSize = New System.Drawing.Size(1921, 902)
+        Me.CCh.RegularSize = New System.Drawing.Size(1654, 719)
         Me.CCh.SelectedPage = Me.TabNavigationPage1
-        Me.CCh.Size = New System.Drawing.Size(1921, 902)
+        Me.CCh.Size = New System.Drawing.Size(1654, 719)
         Me.CCh.TabIndex = 7
         Me.CCh.Text = "TabPane1"
         '
@@ -3539,12 +3642,11 @@ Partial Class Form1
         Me.TabNavigationPage2.Controls.Add(Me.PictureBox2)
         Me.TabNavigationPage2.Controls.Add(Me.VRMChart)
         Me.TabNavigationPage2.Name = "TabNavigationPage2"
-        Me.TabNavigationPage2.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage2.Size = New System.Drawing.Size(1635, 671)
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(1711, 13)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(172, 82)
@@ -3697,7 +3799,7 @@ Partial Class Form1
         Series15.View = SwiftPlotSeriesView16
         Me.VRMChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series7, Series8, Series9, Series10, Series11, Series12, Series13, Series14, Series15}
         Me.VRMChart.SeriesTemplate.View = SwiftPlotSeriesView17
-        Me.VRMChart.Size = New System.Drawing.Size(1893, 857)
+        Me.VRMChart.Size = New System.Drawing.Size(1635, 671)
         Me.VRMChart.TabIndex = 15
         ChartTitle2.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Raw Mill Operations"
@@ -3709,11 +3811,10 @@ Partial Class Form1
         Me.TabNavigationPage3.Controls.Add(Me.PictureBox3)
         Me.TabNavigationPage3.Controls.Add(Me.KilnChart)
         Me.TabNavigationPage3.Name = "TabNavigationPage3"
-        Me.TabNavigationPage3.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage3.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox3
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(1701, 13)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(172, 82)
@@ -3894,7 +3995,7 @@ Partial Class Form1
         Series26.View = SwiftPlotSeriesView28
         Me.KilnChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series16, Series17, Series18, Series19, Series20, Series21, Series22, Series23, Series24, Series25, Series26}
         Me.KilnChart.SeriesTemplate.View = SwiftPlotSeriesView29
-        Me.KilnChart.Size = New System.Drawing.Size(1893, 857)
+        Me.KilnChart.Size = New System.Drawing.Size(1636, 674)
         Me.KilnChart.TabIndex = 0
         ChartTitle3.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle3.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kiln Operation"
@@ -3906,11 +4007,10 @@ Partial Class Form1
         Me.TabNavigationPage4.Controls.Add(Me.PictureBox4)
         Me.TabNavigationPage4.Controls.Add(Me.ChartHistorian)
         Me.TabNavigationPage4.Name = "TabNavigationPage4"
-        Me.TabNavigationPage4.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage4.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
         Me.PictureBox4.Location = New System.Drawing.Point(1712, 15)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(172, 82)
@@ -3938,7 +4038,8 @@ Partial Class Form1
         Series27.Name = "SeriesHistorian"
         Series27.View = SwiftPlotSeriesView30
         Me.ChartHistorian.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series27}
-        Me.ChartHistorian.Size = New System.Drawing.Size(1893, 857)
+        Me.ChartHistorian.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Me.ChartHistorian.Size = New System.Drawing.Size(1636, 674)
         Me.ChartHistorian.TabIndex = 0
         ChartTitle4.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle4.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Historian Trend"
@@ -3950,11 +4051,10 @@ Partial Class Form1
         Me.TabNavigationPage5.Controls.Add(Me.PictureBox5)
         Me.TabNavigationPage5.Controls.Add(Me.PHTChart)
         Me.TabNavigationPage5.Name = "TabNavigationPage5"
-        Me.TabNavigationPage5.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage5.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox5
         '
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
         Me.PictureBox5.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(172, 82)
@@ -3993,7 +4093,7 @@ Partial Class Form1
         Series28.View = SwiftPlotSeriesView31
         Me.PHTChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series28}
         Me.PHTChart.SeriesTemplate.View = SwiftPlotSeriesView32
-        Me.PHTChart.Size = New System.Drawing.Size(1893, 857)
+        Me.PHTChart.Size = New System.Drawing.Size(1636, 674)
         Me.PHTChart.TabIndex = 1
         ChartTitle5.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Pre-Heat Tower Operation"
@@ -4005,11 +4105,10 @@ Partial Class Form1
         Me.TabNavigationPage6.Controls.Add(Me.PictureBox6)
         Me.TabNavigationPage6.Controls.Add(Me.CoolerChart)
         Me.TabNavigationPage6.Name = "TabNavigationPage6"
-        Me.TabNavigationPage6.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage6.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox6
         '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
         Me.PictureBox6.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(172, 82)
@@ -4048,7 +4147,7 @@ Partial Class Form1
         Series29.View = SwiftPlotSeriesView33
         Me.CoolerChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series29}
         Me.CoolerChart.SeriesTemplate.View = SwiftPlotSeriesView34
-        Me.CoolerChart.Size = New System.Drawing.Size(1893, 857)
+        Me.CoolerChart.Size = New System.Drawing.Size(1636, 674)
         Me.CoolerChart.TabIndex = 17
         ChartTitle6.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle6.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cooler Operation"
@@ -4060,11 +4159,10 @@ Partial Class Form1
         Me.TabNavigationPage7.Controls.Add(Me.PictureBox7)
         Me.TabNavigationPage7.Controls.Add(Me.FM1Chart)
         Me.TabNavigationPage7.Name = "TabNavigationPage7"
-        Me.TabNavigationPage7.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage7.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox7
         '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(172, 82)
@@ -4103,7 +4201,7 @@ Partial Class Form1
         Series30.View = SwiftPlotSeriesView35
         Me.FM1Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series30}
         Me.FM1Chart.SeriesTemplate.View = SwiftPlotSeriesView36
-        Me.FM1Chart.Size = New System.Drawing.Size(1893, 857)
+        Me.FM1Chart.Size = New System.Drawing.Size(1636, 674)
         Me.FM1Chart.TabIndex = 17
         ChartTitle7.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle7.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 1 Operation"
@@ -4115,11 +4213,10 @@ Partial Class Form1
         Me.TabNavigationPage8.Controls.Add(Me.PictureBox8)
         Me.TabNavigationPage8.Controls.Add(Me.FM2Chart)
         Me.TabNavigationPage8.Name = "TabNavigationPage8"
-        Me.TabNavigationPage8.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage8.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox8
         '
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
         Me.PictureBox8.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(172, 82)
@@ -4158,7 +4255,7 @@ Partial Class Form1
         Series31.View = SwiftPlotSeriesView37
         Me.FM2Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series31}
         Me.FM2Chart.SeriesTemplate.View = SwiftPlotSeriesView38
-        Me.FM2Chart.Size = New System.Drawing.Size(1893, 857)
+        Me.FM2Chart.Size = New System.Drawing.Size(1636, 674)
         Me.FM2Chart.TabIndex = 19
         ChartTitle8.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle8.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 2 Operation"
@@ -4170,11 +4267,10 @@ Partial Class Form1
         Me.TabNavigationPage9.Controls.Add(Me.PictureBox9)
         Me.TabNavigationPage9.Controls.Add(Me.FM3Chart)
         Me.TabNavigationPage9.Name = "TabNavigationPage9"
-        Me.TabNavigationPage9.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage9.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox9
         '
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
         Me.PictureBox9.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(172, 82)
@@ -4213,7 +4309,7 @@ Partial Class Form1
         Series32.View = SwiftPlotSeriesView39
         Me.FM3Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series32}
         Me.FM3Chart.SeriesTemplate.View = SwiftPlotSeriesView40
-        Me.FM3Chart.Size = New System.Drawing.Size(1893, 857)
+        Me.FM3Chart.Size = New System.Drawing.Size(1636, 674)
         Me.FM3Chart.TabIndex = 19
         ChartTitle9.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle9.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 3 Operation"
@@ -4225,11 +4321,10 @@ Partial Class Form1
         Me.TabNavigationPage10.Controls.Add(Me.PictureBox10)
         Me.TabNavigationPage10.Controls.Add(Me.FM4Chart)
         Me.TabNavigationPage10.Name = "TabNavigationPage10"
-        Me.TabNavigationPage10.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage10.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox10
         '
-        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
         Me.PictureBox10.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(172, 82)
@@ -4268,7 +4363,7 @@ Partial Class Form1
         Series33.View = SwiftPlotSeriesView41
         Me.FM4Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series33}
         Me.FM4Chart.SeriesTemplate.View = SwiftPlotSeriesView42
-        Me.FM4Chart.Size = New System.Drawing.Size(1893, 857)
+        Me.FM4Chart.Size = New System.Drawing.Size(1636, 674)
         Me.FM4Chart.TabIndex = 19
         ChartTitle10.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle10.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 4 Operation"
@@ -4280,11 +4375,10 @@ Partial Class Form1
         Me.TabNavigationPage11.Controls.Add(Me.PictureBox11)
         Me.TabNavigationPage11.Controls.Add(Me.FM5Chart)
         Me.TabNavigationPage11.Name = "TabNavigationPage11"
-        Me.TabNavigationPage11.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage11.Size = New System.Drawing.Size(1636, 674)
         '
         'PictureBox11
         '
-        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
         Me.PictureBox11.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(172, 82)
@@ -4323,7 +4417,7 @@ Partial Class Form1
         Series34.View = SwiftPlotSeriesView43
         Me.FM5Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series34}
         Me.FM5Chart.SeriesTemplate.View = SwiftPlotSeriesView44
-        Me.FM5Chart.Size = New System.Drawing.Size(1893, 857)
+        Me.FM5Chart.Size = New System.Drawing.Size(1636, 674)
         Me.FM5Chart.TabIndex = 19
         ChartTitle11.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle11.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 5 Operation"
@@ -4333,7 +4427,7 @@ Partial Class Form1
         '
         Me.TabNavigationPage12.Caption = "Quality"
         Me.TabNavigationPage12.Name = "TabNavigationPage12"
-        Me.TabNavigationPage12.Size = New System.Drawing.Size(1893, 857)
+        Me.TabNavigationPage12.Size = New System.Drawing.Size(1636, 674)
         '
         'tmrUpdateRealTime
         '
@@ -4424,24 +4518,36 @@ Partial Class Form1
         'BGW12
         '
         '
-        'LDMS7_MIDDataSet
+        'BarCheckItem13
         '
-        Me.LDMS7_MIDDataSet.DataSetName = "LDMS7_MIDDataSet"
-        Me.LDMS7_MIDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.BarCheckItem13.Caption = "BarCheckItem7"
+        Me.BarCheckItem13.Id = 396
+        Me.BarCheckItem13.Name = "BarCheckItem13"
         '
-        'Form1
+        'BarCheckItem14
+        '
+        Me.BarCheckItem14.Caption = "BarCheckItem7"
+        Me.BarCheckItem14.Id = 396
+        Me.BarCheckItem14.Name = "BarCheckItem14"
+        '
+        'BarCheckItem15
+        '
+        Me.BarCheckItem15.Caption = "BarCheckItem8"
+        Me.BarCheckItem15.Id = 397
+        Me.BarCheckItem15.Name = "BarCheckItem15"
+        '
+        'MainPage
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
         Me.Appearance.BackColor = System.Drawing.Color.Black
         Me.Appearance.Options.UseBackColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1921, 1076)
+        Me.ClientSize = New System.Drawing.Size(1654, 893)
         Me.Controls.Add(Me.CCh)
         Me.Controls.Add(Me.ribbonStatusBar)
         Me.Controls.Add(Me.ribbonControl)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.Name = "MainPage"
         Me.Ribbon = Me.ribbonControl
         Me.StatusBar = Me.ribbonStatusBar
         Me.Text = "Midlothian - Plant Operations"
@@ -4510,6 +4616,7 @@ Partial Class Form1
         CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM6Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4678,7 +4785,6 @@ Partial Class Form1
         CType(Me.HistoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnalogHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnalogHistoryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4883,4 +4989,22 @@ Partial Class Form1
     Friend WithEvents BGW11 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BGW12 As System.ComponentModel.BackgroundWorker
     Friend WithEvents LDMS7_MIDDataSet As LDMS7_MIDDataSet
+    Friend WithEvents RibbonPage1 As RibbonPage
+    Friend WithEvents RibbonPageGroup4 As RibbonPageGroup
+    Friend WithEvents BarCheckItem1 As BarCheckItem
+    Friend WithEvents BarCheckItem2 As BarCheckItem
+    Friend WithEvents BarCheckItem3 As BarCheckItem
+    Friend WithEvents BarCheckItem4 As BarCheckItem
+    Friend WithEvents BarCheckItem5 As BarCheckItem
+    Friend WithEvents BarCheckItem6 As BarCheckItem
+    Friend WithEvents BarCheckItem7 As BarCheckItem
+    Friend WithEvents BarCheckItem8 As BarCheckItem
+    Friend WithEvents BarCheckItem9 As BarCheckItem
+    Friend WithEvents BarCheckItem10 As BarCheckItem
+    Friend WithEvents BarCheckItem11 As BarCheckItem
+    Friend WithEvents BarCheckItem12 As BarCheckItem
+    Friend WithEvents BarCheckItem13 As BarCheckItem
+    Friend WithEvents BarCheckItem14 As BarCheckItem
+    Friend WithEvents BarCheckItem15 As BarCheckItem
+    Friend WithEvents BarButtonItem8 As BarButtonItem
 End Class

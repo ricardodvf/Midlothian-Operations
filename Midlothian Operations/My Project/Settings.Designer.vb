@@ -171,6 +171,150 @@ Namespace My
                 Return CType(Me("LDMS7_MIDConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property RMTrendActive() As Boolean
+            Get
+                Return CType(Me("RMTrendActive"),Boolean)
+            End Get
+            Set
+                Me("RMTrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property PHTTrendActive() As Boolean
+            Get
+                Return CType(Me("PHTTrendActive"),Boolean)
+            End Get
+            Set
+                Me("PHTTrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property KilnTrendActive() As Boolean
+            Get
+                Return CType(Me("KilnTrendActive"),Boolean)
+            End Get
+            Set
+                Me("KilnTrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property CoolerTrendActive() As Boolean
+            Get
+                Return CType(Me("CoolerTrendActive"),Boolean)
+            End Get
+            Set
+                Me("CoolerTrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM1TrendActive() As Boolean
+            Get
+                Return CType(Me("FM1TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM1TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM2TrendActive() As Boolean
+            Get
+                Return CType(Me("FM2TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM2TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM3TrendActive() As Boolean
+            Get
+                Return CType(Me("FM3TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM3TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM4TrendActive() As Boolean
+            Get
+                Return CType(Me("FM4TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM4TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM5TrendActive() As Boolean
+            Get
+                Return CType(Me("FM5TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM5TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM6_1TrendActive() As Boolean
+            Get
+                Return CType(Me("FM6_1TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM6_1TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property FM6_2TrendActive() As Boolean
+            Get
+                Return CType(Me("FM6_2TrendActive"),Boolean)
+            End Get
+            Set
+                Me("FM6_2TrendActive") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property QualityTrendActive() As String
+            Get
+                Return CType(Me("QualityTrendActive"),String)
+            End Get
+            Set
+                Me("QualityTrendActive") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
