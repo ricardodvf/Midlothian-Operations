@@ -600,6 +600,9 @@ Partial Class MainPage
         Me.BarCheckItem13 = New DevExpress.XtraBars.BarCheckItem()
         Me.BarCheckItem14 = New DevExpress.XtraBars.BarCheckItem()
         Me.BarCheckItem15 = New DevExpress.XtraBars.BarCheckItem()
+        Me.tmrError = New System.Windows.Forms.Timer(Me.components)
+        Me.BarEditItem3 = New DevExpress.XtraBars.BarEditItem()
+        Me.BarEditItem4 = New DevExpress.XtraBars.BarEditItem()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollectionLarge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollection, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1013,8 +1016,11 @@ Partial Class MainPage
         'BarButtonItem3
         '
         Me.BarButtonItem3.Caption = "Historian Configuration"
+        Me.BarButtonItem3.Glyph = CType(resources.GetObject("BarButtonItem3.Glyph"), System.Drawing.Image)
         Me.BarButtonItem3.Id = 382
+        Me.BarButtonItem3.LargeGlyph = CType(resources.GetObject("BarButtonItem3.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem3.Name = "BarButtonItem3"
+        Me.BarButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'BarButtonItem4
         '
@@ -1046,7 +1052,8 @@ Partial Class MainPage
         Me.DTPFrom.EditWidth = 150
         Me.DTPFrom.Id = 386
         Me.DTPFrom.Name = "DTPFrom"
-        Me.DTPFrom.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.DTPFrom.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'RepositoryItemDateEdit1
         '
@@ -1055,31 +1062,48 @@ Partial Class MainPage
         Me.RepositoryItemDateEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003
         Me.RepositoryItemDateEdit1.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.[True]
         Me.RepositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepositoryItemDateEdit1.CalendarTimeProperties.EditFormat.FormatString = "d"
+        Me.RepositoryItemDateEdit1.CalendarTimeProperties.DisplayFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit1.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.RepositoryItemDateEdit1.CalendarTimeProperties.EditFormat.FormatString = "G"
         Me.RepositoryItemDateEdit1.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.RepositoryItemDateEdit1.DisplayFormat.FormatString = ""
-        Me.RepositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.RepositoryItemDateEdit1.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista
+        Me.RepositoryItemDateEdit1.DisplayFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.RepositoryItemDateEdit1.EditFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.RepositoryItemDateEdit1.Name = "RepositoryItemDateEdit1"
+        Me.RepositoryItemDateEdit1.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         '
         'DTPTo
         '
         Me.DTPTo.Caption = "    To:"
         Me.DTPTo.Edit = Me.RepositoryItemDateEdit2
         Me.DTPTo.EditHeight = 30
+        Me.DTPTo.EditValue = "4/15/2018 10:49:28 PM"
         Me.DTPTo.EditWidth = 150
         Me.DTPTo.Id = 387
         Me.DTPTo.Name = "DTPTo"
-        Me.DTPTo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.DTPTo.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'RepositoryItemDateEdit2
         '
         Me.RepositoryItemDateEdit2.AutoHeight = False
         Me.RepositoryItemDateEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit2.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003
+        Me.RepositoryItemDateEdit2.CalendarTimeEditing = DevExpress.Utils.DefaultBoolean.[True]
         Me.RepositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RepositoryItemDateEdit2.DisplayFormat.FormatString = ""
-        Me.RepositoryItemDateEdit2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.RepositoryItemDateEdit2.CalendarTimeProperties.DisplayFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit2.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.RepositoryItemDateEdit2.CalendarTimeProperties.EditFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit2.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.RepositoryItemDateEdit2.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista
+        Me.RepositoryItemDateEdit2.DisplayFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.RepositoryItemDateEdit2.EditFormat.FormatString = "G"
+        Me.RepositoryItemDateEdit2.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.RepositoryItemDateEdit2.Name = "RepositoryItemDateEdit2"
+        Me.RepositoryItemDateEdit2.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.[True]
         '
         'BarButtonItem6
         '
@@ -1092,7 +1116,9 @@ Partial Class MainPage
         'BarButtonItem7
         '
         Me.BarButtonItem7.Caption = "Close Program"
+        Me.BarButtonItem7.Glyph = CType(resources.GetObject("BarButtonItem7.Glyph"), System.Drawing.Image)
         Me.BarButtonItem7.Id = 389
+        Me.BarButtonItem7.LargeGlyph = CType(resources.GetObject("BarButtonItem7.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem7.Name = "BarButtonItem7"
         '
         'BarCheckItem1
@@ -4536,6 +4562,30 @@ Partial Class MainPage
         Me.BarCheckItem15.Id = 397
         Me.BarCheckItem15.Name = "BarCheckItem15"
         '
+        'tmrError
+        '
+        Me.tmrError.Interval = 30000
+        '
+        'BarEditItem3
+        '
+        Me.BarEditItem3.Caption = "From:"
+        Me.BarEditItem3.Edit = Me.RepositoryItemDateEdit1
+        Me.BarEditItem3.EditHeight = 30
+        Me.BarEditItem3.EditValue = New Date(2018, 4, 15, 22, 49, 28, 135)
+        Me.BarEditItem3.EditWidth = 150
+        Me.BarEditItem3.Id = 386
+        Me.BarEditItem3.Name = "BarEditItem3"
+        '
+        'BarEditItem4
+        '
+        Me.BarEditItem4.Caption = "From:"
+        Me.BarEditItem4.Edit = Me.RepositoryItemDateEdit1
+        Me.BarEditItem4.EditHeight = 30
+        Me.BarEditItem4.EditValue = New Date(2018, 4, 15, 22, 49, 28, 135)
+        Me.BarEditItem4.EditWidth = 150
+        Me.BarEditItem4.Id = 386
+        Me.BarEditItem4.Name = "BarEditItem4"
+        '
         'MainPage
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -5007,4 +5057,7 @@ Partial Class MainPage
     Friend WithEvents BarCheckItem14 As BarCheckItem
     Friend WithEvents BarCheckItem15 As BarCheckItem
     Friend WithEvents BarButtonItem8 As BarButtonItem
+    Friend WithEvents tmrError As Timer
+    Friend WithEvents BarEditItem3 As BarEditItem
+    Friend WithEvents BarEditItem4 As BarEditItem
 End Class

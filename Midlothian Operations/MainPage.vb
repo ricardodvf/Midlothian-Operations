@@ -338,7 +338,7 @@ Public Class MainPage
             PChart.Series(PSeries).Points.Add(New SeriesPoint(PTime, PValue))
             PChart.Series.EndUpdate()
         Catch ex As Exception
-
+            Call LogErrorMessage(ex.Message, "AddPointstoChart()")
         End Try
 
     End Sub
@@ -408,7 +408,7 @@ Public Class MainPage
     Dim DTBCooler As DataTable = ReadXMLtoDataTable("Cooler.xml")
     Dim DTBFM1 As DataTable = ReadXMLtoDataTable("FM1.xml")
     Dim DTBFM2 As DataTable = ReadXMLtoDataTable("FM2.xml")
-    Dim DTBFM3 As DataTable = ReadXMLtoDataTable("FM2.xml")
+    Dim DTBFM3 As DataTable = ReadXMLtoDataTable("FM3.xml")
     Dim DTBFM4 As DataTable = ReadXMLtoDataTable("FM4.xml")
     Dim DTBFM5 As DataTable = ReadXMLtoDataTable("FM5.xml")
     Dim DTBFM6_1 As DataTable = ReadXMLtoDataTable("FM6-1.xml")
@@ -663,7 +663,7 @@ Public Class MainPage
             DT.ReadXml(FN)
             'xmlFile.Close()
         Catch ex As Exception
-
+            Call LogErrorMessage(ex.Message, "Main Page ReadXMLtoDataTable()")
         End Try
         Return DT
     End Function
@@ -864,7 +864,7 @@ Public Class MainPage
 
             Next
         Catch ex As Exception
-
+            Call LogErrorMessage(ex.Message, "Rows Handling in GetValues from Server")
         End Try
 
 
@@ -873,7 +873,7 @@ Public Class MainPage
             sqlConnectionBGW.Close()
             sqlConnectionBGWLDMS.Close()
         Catch ex As Exception
-
+            Call LogErrorMessage(ex.Message, "sqlConnectionBGW.Close in GetValues from Server")
         End Try
 
         Return Result
@@ -1056,15 +1056,6 @@ Public Class MainPage
         Dim A As New ServerOptions
         A.Show()
     End Sub
-
-
-
-    Private Sub BarButtonItem3_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem3.ItemClick
-        'Historian Configuration Button
-        ' Call UpdateSingleSeries(VRMChart, "RNEW", "Raw Mill Vibration", 100, 0, Color.Red)
-    End Sub
-
-
 
 
     Dim DTB As New DataTable
@@ -1299,6 +1290,40 @@ Public Class MainPage
         Next
 
     End Sub
+    Private Sub LogErrorMessage(Message As String, Location As String)
+        Try
+            siStatus.Caption = "Error"
+            siInfo.Caption = Message
+            tmrError.Enabled = False
+            tmrError.Enabled = True
+        Catch ex As Exception
+            Exit Try
+        End Try
 
+        Try
+            If System.IO.File.Exists("ErrorLog.txt") = False Then
+                System.IO.File.Create("ErrorLog.txt")
+            End If
+        Catch ex As Exception
+            Exit Try
+        End Try
+
+
+        Try
+            Dim file As System.IO.StreamWriter = My.Computer.FileSystem.OpenTextFileWriter("ErrorLog.txt", True)
+            file.WriteLine(String.Format("{0} - {1} - {2}", Now(), Message, Location))
+            file.Close()
+        Catch ex As Exception
+            Exit Try
+        End Try
+
+
+    End Sub
+
+    Private Sub tmrError_Tick(sender As Object, e As EventArgs) Handles tmrError.Tick
+        siInfo.Caption = ""
+        siStatus.Caption = ""
+        tmrError.Enabled = False
+    End Sub
 End Class
 
