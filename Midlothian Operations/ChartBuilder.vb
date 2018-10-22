@@ -131,6 +131,7 @@ Public Class ChartBuilder
         Call Save()
 
         Call MainPage.LoadTrendsSettings()
+
         Close()
     End Sub
 
@@ -217,6 +218,7 @@ Public Class ChartBuilder
         DTHistorian.Rows.Add(dr)
     End Sub
     Private Sub ReadXMLDataSet(FN As String)
+        'Reads XML file with the chart configuration
         Dim xmlFile As XmlReader = XmlReader.Create(FN, New XmlReaderSettings())
         Dim ds As New DataSet
         Try
@@ -239,7 +241,7 @@ Public Class ChartBuilder
 
 
     Private Sub RadioGroup1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadioGroup1.SelectedIndexChanged
-
+        'When user selects a different chart it loads the data
         ListView1.Items.Clear()
         Try
             Select Case RadioGroup1.SelectedIndex
@@ -291,6 +293,7 @@ Public Class ChartBuilder
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+        'Populates all fields when user clicks on any item from the list
         If ListView1.SelectedItems.Count > 0 Then
             TextBox1.Text = ListView1.SelectedItems.Item(0).SubItems(0).Text
             TextBox2.Text = ListView1.SelectedItems.Item(0).SubItems(2).Text
@@ -421,8 +424,37 @@ Public Class ChartBuilder
 
     End Sub
 
+    Private Sub SimpleButton6_Click(sender As Object, e As EventArgs) Handles SimpleButton6.Click
+        'Save this chart button
+        Try
+            SaveFileDialog1.Filter = "Chart Configuration File (*.XML) | *.xml"
+            SaveFileDialog1.ShowDialog()
+            If SaveFileDialog1.FileName <> "" Then
+                Call WriteXMLDataSet(SaveFileDialog1.FileName)
+            End If
+        Catch ex As Exception
 
 
+        End Try
 
+    End Sub
 
+    Private Sub SimpleButton7_Click(sender As Object, e As EventArgs) Handles SimpleButton7.Click
+        'Load a chart button
+        Try
+            ListView1.Items.Clear()
+            OpenFileDialog1.Filter = "Chart Configuration File (*.XML) | *.xml"
+            OpenFileDialog1.ShowDialog()
+            If OpenFileDialog1.FileName <> "" And OpenFileDialog1.CheckFileExists = True Then
+                Call ReadXMLDataSet(OpenFileDialog1.FileName)
+            End If
+            'Call Save()
+        Catch ex As Exception
+        End Try
+        Call Save()
+        If RadioGroup1.SelectedIndex = 0 Then
+            Call MainPage.RefreshHistorianChart()
+        End If
+
+    End Sub
 End Class

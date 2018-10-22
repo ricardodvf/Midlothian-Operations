@@ -41,6 +41,8 @@ Partial Class ChartBuilder
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -54,6 +56,8 @@ Partial Class ChartBuilder
         Me.RadioGroup1 = New DevExpress.XtraEditors.RadioGroup()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -248,6 +252,8 @@ Partial Class ChartBuilder
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.SimpleButton7)
+        Me.GroupBox5.Controls.Add(Me.SimpleButton6)
         Me.GroupBox5.Controls.Add(Me.SimpleButton3)
         Me.GroupBox5.Controls.Add(Me.ListView1)
         Me.GroupBox5.Font = New System.Drawing.Font("Tahoma", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -257,6 +263,24 @@ Partial Class ChartBuilder
         Me.GroupBox5.TabIndex = 6
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Selected Tags in Chart"
+        '
+        'SimpleButton7
+        '
+        Me.SimpleButton7.Image = CType(resources.GetObject("SimpleButton7.Image"), System.Drawing.Image)
+        Me.SimpleButton7.Location = New System.Drawing.Point(277, 180)
+        Me.SimpleButton7.Name = "SimpleButton7"
+        Me.SimpleButton7.Size = New System.Drawing.Size(157, 34)
+        Me.SimpleButton7.TabIndex = 6
+        Me.SimpleButton7.Text = "Load a Chart"
+        '
+        'SimpleButton6
+        '
+        Me.SimpleButton6.Image = CType(resources.GetObject("SimpleButton6.Image"), System.Drawing.Image)
+        Me.SimpleButton6.Location = New System.Drawing.Point(441, 180)
+        Me.SimpleButton6.Name = "SimpleButton6"
+        Me.SimpleButton6.Size = New System.Drawing.Size(157, 34)
+        Me.SimpleButton6.TabIndex = 5
+        Me.SimpleButton6.Text = "Save this chart"
         '
         'SimpleButton3
         '
@@ -368,6 +392,10 @@ Partial Class ChartBuilder
         Me.SimpleButton4.TabIndex = 8
         Me.SimpleButton4.Text = "OK"
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'ChartBuilder
         '
         Me.AcceptButton = Me.SimpleButton1
@@ -435,4 +463,8 @@ Partial Class ChartBuilder
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents SimpleButton5 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton7 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SimpleButton6 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

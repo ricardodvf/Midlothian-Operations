@@ -364,6 +364,7 @@ Public Class MainPage
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'LDMS7_MIDDataSet.LabData_FinishMill' table. You can move, or remove it, as needed.
+
         BarCheckItem1.Checked = My.Settings.FM6_1TrendActive
         BarCheckItem2.Checked = My.Settings.FM6_2TrendActive
         BarCheckItem3.Checked = My.Settings.RMTrendActive
@@ -376,8 +377,6 @@ Public Class MainPage
         BarCheckItem10.Checked = My.Settings.FM4TrendActive
         BarCheckItem11.Checked = My.Settings.FM5TrendActive
         BarCheckItem12.Checked = My.Settings.QualityTrendActive
-
-
 
 
         Call KeepMonitorActive()
@@ -803,21 +802,6 @@ Public Class MainPage
 
     End Sub
 
-    Private Function GetHistorianData(Tags As String) As DataTable
-
-        Dim QDataSet As New DataTable
-        Dim MyCommand As New SqlCommand
-        Dim QString As String = String.Format("SELECT * FROM OPENQUERY(INSQL,'SELECT DateTime, A411SI1_FT01, A431FN1M01_SI01, A432RF6M01_HIK01, A481VT1_FI01, A461KL1M01_II01, A481PW1_FI01, A481PW2_FI01, A481PW3_FI01, A441VT1_FI01_CFH, A351AF3M01_SI01, A351AN1_FO01, A361HS1_VI01, A361RM1_PI01, A361SR1M01_SI01, A541BE1M01_JI01, A541BM1_TI01, A541BM1M01_JI01, A541GO1_LI01, A541SR1M01_SI01, A541WS1_FI01, FMFDTOTAL, A434AN1_AI03_LB_HR, A434AN1_AI02_LB_HR, A434AN1_THC_LB_TN_CKR_1MIN, A434AN1_CO_LB_TN_CKR_1MIN, wwRowCount, wwRetrievalMode, wwResolution, wwCycleCount FROM Runtime.dbo.WideHistory WHERE A481PW1_FI01 > -20 AND wwCycleCount = {2} AND DateTime >= dateadd(hour,-120,GetDate())')", "AVERAGE", # 10/1/2018 #, 120)
-
-
-        Dim SQLADAPT As SqlDataAdapter = New SqlDataAdapter(QString, sqlConnection1)
-
-        SQLADAPT.Fill(QDataSet)
-
-        Return QDataSet
-
-    End Function
-
 
     Private Function GetValuesfromServer(DTBInput As DataTable) As DataTable
         ' Create Connections
@@ -1061,30 +1045,6 @@ Public Class MainPage
     Dim DTB As New DataTable
     Dim DTBLDMS As New DataTable
 
-
-    Private Function FillDataTable(TagName As String) As DataTable
-        Const strSql As String = "SELECT * FROM OpenQuery(INSQL,'SELECT DateTime, A411SI1_FT01, A481VT1_FI01,FMFDTOTAL,wwRetrievalMode, wwCycleCount FROM Runtime.dbo.WideHistory WHERE A481PW1_FI01 > -20 AND wwCycleCount = 120 AND DateTime >= DATEADD(hour,-120,GetDate())')"
-        Dim dtb As New DataTable
-
-        Try
-            sqlConnection1.Open()
-        Catch ex As Exception
-            siStatus.Caption = "Error"
-            siInfo.Caption = "FillDataTable - " & ex.Message
-        End Try
-
-        Using dad As New SqlDataAdapter(strSql, sqlConnection1)
-            dad.Fill(dtb)
-        End Using
-        sqlConnection1.Close()
-
-        Return dtb
-
-    End Function
-
-
-
-
     Private Sub TabPane1_SelectedPageChanged(sender As Object, e As SelectedPageChangedEventArgs) Handles CCh.SelectedPageChanged
         Select Case CCh.SelectedPage.Caption
             Case "Historian"
@@ -1188,107 +1148,302 @@ Public Class MainPage
 
     End Sub
 
-    Private Sub BarButtonItem8_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem8.ItemClick
-        Dim AST As new DataTable
+    Public Class LDMSParameters
+        Public Tag
+        Public Equipment
+        Public Source
+        Public ProductType
+    End Class
+    Private Function GetValuesfromLDMSServer(Tagnames() As String, sqlConnectionBGWLDMS As SqlConnection, dateFrom As Date, dateTo As Date) As DataSet
+        'Returns a dataset with a table for each LDMS tag needed
+        If Tagnames.Count = 0 Then
+            Return New DataSet
+            Exit Function
+        End If
+
+        'Try
+        '    sqlConnectionBGWLDMS.Open()
+        'Catch ex As Exception
+        '    Return New DataSet
+        '    Exit Function
+        'End Try
+        Dim cmdBGWLDMS As New SqlCommand
+        Dim Result As New DataSet
+        'If sqlConnectionBGWLDMS.State = ConnectionState.Closed Then
+        '    Return 0
+        'End If
+        Dim ch As String
+        Dim X As Integer = 1
+        Dim Y As Integer = 0
+
+
+        Dim ldmsParam(Tagnames.Count - 1) As LDMSParameters
+        For Each row In ldmsParam
+            row = New LDMSParameters
+        Next
+
+
+
+        For Each tag As String In Tagnames
+            ldmsParam(Y) = New LDMSParameters
+            Do
+                ldmsParam(Y).Equipment = ldmsParam(Y).Equipment & Mid(tag, X, 1)
+                X = X + 1
+            Loop Until Mid(tag, X, 1) = "\" Or Mid(tag, X, 1) = "-" Or X > tag.Length
+
+            X = X + 1
+            Do
+                ch = Mid(tag, X, 1)
+                ldmsParam(Y).Source = ldmsParam(Y).Source & ch
+                X = X + 1
+            Loop Until Mid(tag, X, 1) = "\" Or Mid(tag, X, 1) = "-" Or X > tag.Length
+            X = X + 1
+            Do
+                ch = Mid(tag, X, 1)
+                ldmsParam(Y).ProductType = ldmsParam(Y).ProductType & ch
+                X = X + 1
+            Loop Until Mid(tag, X, 1) = "\" Or Mid(tag, X, 1) = "-" Or X > tag.Length
+            X = X + 1
+            Do
+                ch = Mid(tag, X, 1)
+                ldmsParam(Y).Tag = ldmsParam(Y).Tag & ch
+                X = X + 1
+            Loop Until X > tag.Length
+            Y = Y + 1
+            X = 1
+        Next
+        Try
+            For Each row In ldmsParam
+                Select Case row.Equipment
+                    Case "FinishMill"
+                        cmdBGWLDMS.CommandText = String.Format("Select  LabData_{0}.SampleTime, {2} 
+                                                                FROM        LabData_{0} INNER JOIN
+                                                                InstData_XRay ON LabData_{0}.SampleId = InstData_XRay.SampleID
+                                                    WHERE       (LabData_{0}.Source = N'{1}' AND LabData_{0}.ProductType = N'{3}')
+                                                    ORDER BY    LabData_{0}.SampleTime DESC", row.Equipment, row.Source, row.Tag, row.ProductType)
+                    Case Else
+                        cmdBGWLDMS.CommandText = String.Format("Select LabData_{0}.SampleTime, {1} 
+                                                                FROM        LabData_{0} INNER JOIN
+                                                                InstData_XRay ON LabData_{0}.SampleId = InstData_XRay.SampleID
+                                                    ORDER BY    LabData_{0}.SampleTime DESC", row.Equipment, row.Tag)
+                End Select
+                Using dad As New SqlDataAdapter(cmdBGWLDMS.CommandText, sqlConnectionBGWLDMS)
+                    Result.Tables.Add(New DataTable)
+                    dad.Fill(Result.Tables(Result.Tables.Count - 1))
+                    Result.Tables(Result.Tables.Count - 1).Columns(0).ColumnName = "DateTime"
+                    Result.Tables(Result.Tables.Count - 1).Columns(0).ColumnName = String.Format("{0}-{1}-{2}-{3}", row.Equipment, row.Source, row.ProductType, row.Tag)
+                End Using
+            Next
+        Catch ex As Exception
+            Return New DataSet
+        End Try
+        Return Result
+    End Function
+    Public Class BGWHistorian
+        Public tagNames As String
+        Public dateFrom As Date
+        Public dateTo As Date
+        Public tagsRandom() As String
+        Public tagsLDMS() As String
+
+    End Class
+    Private Sub bgwHistorian_DoWork(sender As Object, e As DoWorkEventArgs) Handles bgwUpdateHistorian.DoWork
+        Dim ResultDataSet As New DataSet
+        Dim tempDataSet As New DataSet
+        Dim historianParameters As BGWHistorian = e.Argument
+        Dim sqlConnectionBGWLDMS As New SqlConnection(String.Format("Data Source={0};Initial Catalog='LDMS7 MID';Persist Security Info=True;User ID={2}; password={2}", ConfPerm.LDMSServer, ConfPerm.LDMSUserName, DecryptHSA256(ConfPerm.LDMSPassword)))
+
+        'ResultDataSet.Tables.Add(FillHistorianDataTable(historianParameters.tagNames, historianParameters.tagsLDMS, historianParameters.dateFrom, historianParameters.dateTo))
+        ResultDataSet.Tables.Add(GenerateRandomHistorian(historianParameters.tagsRandom, historianParameters.dateFrom, historianParameters.dateTo))
+        tempDataSet = GetValuesfromLDMSServer(historianParameters.tagsLDMS, sqlConnectionBGWLDMS, historianParameters.dateFrom, historianParameters.dateTo)
+        For Each table In tempDataSet.Tables
+            ResultDataSet.Tables.Add(table)
+        Next
+        e.Result = ResultDataSet
+
+    End Sub
+
+    Private Sub bgwHistorian_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles bgwUpdateHistorian.RunWorkerCompleted
+        Dim resultDataSet As DataSet = e.Result
+        If resultDataSet.Tables.Count = 0 Then
+            Exit Sub
+        End If
+        Call GenerateHistorianChart(resultDataSet, DTBHistorian)
+        ProgressPanel1.Visible = False
+    End Sub
+    Private Function FillHistorianDataTable(TagNamesWW As String, tagNamesLDMS() As String, dateFrom As Date, dateTo As Date) As DataTable
+        'Connects to Wonderware and returns Historian Values in a datatable
+        Dim historianDataSet As New DataTable
+        Dim wwResolution As Long = 1000
+        Dim ReqSeconds As Long = DateDiff(DateInterval.Second, dateFrom, dateTo)
+        If ReqSeconds >= 86400 Then
+            wwResolution = (ReqSeconds / 86400) * 1000
+        End If
+
+        Dim strSql As String = String.Format("SELECT * FROM OpenQuery(INSQL,'SELECT DateTime, {0} wwRetrievalMode, wwCycleCount FROM Runtime.dbo.WideHistory WHERE wwRetrievalMode = ""Cyclic"" AND wwResolution = {3} AND DateTime >= ""{1}"" AND DateTime <= ""{2}"" ')", TagNamesWW, dateFrom.ToString("yyyy/MM/dd HH:mm:ss"), dateTo.ToString("yyyy/MM/dd HH:mm:ss"), wwResolution)
+
+        Try
+            sqlConnection1.Open()
+            'Fill out table one with Wonderware data
+            Using dad As New SqlDataAdapter(strSql, sqlConnection1)
+                dad.Fill(historianDataSet)
+            End Using
+            sqlConnection1.Close()
+
+            Return historianDataSet
+        Catch ex As Exception
+
+            siStatus.Caption = "Error"
+            siInfo.Caption = "FillDataTable - " & ex.Message
+            Return historianDataSet
+        End Try
+
+    End Function
+    Private Function GenerateRandomHistorian(TagNames() As String, dateFrom As Date, dateTo As Date) As DataTable
+        'Temporary Function to generate random data for testing and debugging offline
+        Dim AST As New DataTable
+        Dim Y As Integer = 0
 
         AST.Columns.Add(New DataColumn("DateTime", Type.GetType("System.DateTime")))
-        AST.Columns.Add(New DataColumn("TAG1", Type.GetType("System.Double")))
-        AST.Columns.Add(New DataColumn("TAG2", Type.GetType("System.Double")))
-        AST.Columns.Add(New DataColumn("TAG3", Type.GetType("System.Double")))
+        Do
+            AST.Columns.Add(New DataColumn(TagNames(Y), Type.GetType("System.Double")))
+            Y = Y + 1
+        Loop Until Y >= TagNames.Count
+
         Dim X As Integer = -1
         Dim RandomNumb As New Random
         Do
             Dim dr As DataRow = AST.NewRow()
             dr("DateTime") = DateAdd(DateInterval.Minute, X, Now())
-            dr("TAG1") = RandomNumb.NextDouble * 10000
-            dr("TAG2") = RandomNumb.NextDouble * 1000
-            dr("TAG3") = RandomNumb.NextDouble * 100
+
+            For Each TN As String In TagNames
+                dr(TN) = RandomNumb.NextDouble * 10000
+            Next
 
             AST.Rows.Add(dr)
             X = X - 1
-        Loop Until X <= -120
+        Loop Until X <= -36400
 
+        Return AST
+    End Function
 
-        Call GenerateHistorianChart(AST, DTBHistorian)
+    Private Sub BarButtonItem8_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem8.ItemClick
+        'Refresh Historian Button
+        Call RefreshHistorianChart()
 
     End Sub
 
-    Private Sub GenerateHistorianChart(Source As DataTable, HistorianConfig As DataTable)
+    Public Sub RefreshHistorianChart()
+        'Brings the data from both LDMS and Wonderware and refreshes the historian chart - reads Historian.xml
+        'BgwUpdateHistorian is called from this subroutine
+        ProgressPanel1.Visible = True
+        Dim numLDMStags As Integer = DTBHistorian.Select("System = 'LDMS'").Count
+        Dim numWWTags As Integer = DTBHistorian.Select("System = 'Wonderware'").Count
 
+        Dim TagsRandom(numWWTags - 1) As String
+        Dim X As Integer = 0
+        Dim Y As Integer = 0
+        Dim TagNamesWW As String = ""
+        Dim TagNamesLDMS(numLDMStags - 1) As String
+        For Each row As DataRow In DTBHistorian.Rows
+            If row.Item(1) = "Wonderware" Then
+                TagNamesWW = String.Format("{0}{1},", TagNamesWW, row.Item(0))
+                TagsRandom(X) = row.Item(0)
+                X = X + 1
+            ElseIf row.Item(1) = "LDMS" Then
+                TagNamesLDMS(Y) = row.Item(0)
+                Y = Y + 1
+            End If
+
+        Next
+        Dim bGparamenters As New BGWHistorian() With {.tagNames = TagNamesWW, .dateFrom = DTPFrom.EditValue, .dateTo = DTPTo.EditValue, .tagsRandom = TagsRandom, .tagsLDMS = TagNamesLDMS}
+        'This background worker contects to datasources and the background complete fills the chart
+        bgwUpdateHistorian.RunWorkerAsync(bGparamenters)
+
+
+    End Sub
+
+    Private Sub GenerateHistorianChart(Source As DataSet, HistorianConfig As DataTable)
+        'Updates the charts using all the datatables in the Source DataSet.  This is called when the bgwHistorian_DoWork is completed or can be called by any other function providing a source.
+        ChartHistorian.BeginInit()
         Dim DD As SwiftPlotDiagram = ChartHistorian.Diagram
+        Dim tableInUse As Integer = 0
         DD.SecondaryAxesY.Clear()
         ChartHistorian.Series.Clear()
 
         ChartHistorian.DataSource = Nothing
-        ChartHistorian.DataSource = Source
-        For Each column As DataColumn In Source.Columns
-            If column.ColumnName <> "DateTime" Then
-                Dim FoundinHistorianRows() As Data.DataRow = HistorianConfig.Select(String.Format("TagName = '{0}'", column.ColumnName))
-                Dim SName As String = FoundinHistorianRows(0).Item("Series_Name")
-                Dim NS As New Series(SName, ViewType.SwiftPlot)
-                Dim diagram As SwiftPlotDiagram
-                Dim SColor As Color = Color.FromArgb(CType(FoundinHistorianRows(0).Item("Color"), Integer))
-                Dim SMax As Integer = FoundinHistorianRows(0).Item("Max")
-                Dim SMin As Integer = FoundinHistorianRows(0).Item("Min")
+        'ChartHistorian.DataSource = Source.Tables(0)
+        For Each table As DataTable In Source.Tables
 
-                If column.ColumnName <> FoundinHistorianRows(0).Item("TagName") Then
-                    MsgBox("Shit.... something went wrong.... crap!...  :-( ", vbCritical, "Shit Happens!")
-                    Exit Sub
-                End If
+            For Each column As DataColumn In table.Columns
+                If column.ColumnName <> "DateTime" And column.ColumnName <> "wwRetrievalMode" And column.ColumnName <> "wwCycleCount" Then
+                    Dim FoundinHistorianRows() As DataRow = HistorianConfig.Select(String.Format("TagName = '{0}'", column.ColumnName))
+                    Dim SName As String = FoundinHistorianRows(0).Item("Series_Name")
+                    Dim NS As New Series(SName, ViewType.SwiftPlot)
+                    Dim diagram As SwiftPlotDiagram
+                    Dim SColor As Color = Color.FromArgb(CType(FoundinHistorianRows(0).Item("Color"), Integer))
+                    Dim SMax As Integer = FoundinHistorianRows(0).Item("Max")
+                    Dim SMin As Integer = FoundinHistorianRows(0).Item("Min")
 
-                'Set the colors
-                NS.Visible = True
-                NS.View.Color = SColor
-                ChartHistorian.Series.Add(NS)
-                If ChartHistorian.Series.Count = 1 Then
-                    'Add the series and configure primary Y axis
+                    If column.ColumnName <> FoundinHistorianRows(0).Item("TagName") Then
+                        MsgBox("Shit.... something went wrong.... crap!...  :-( ", vbCritical, "Shit Happens!")
+                        LogErrorMessage("HistorianConfig.xml and whatever is being plotted don't match.", "GenerateHistorianChart()")
+                        Exit Sub
+                    End If
+                    'Set the DataSource
+                    NS.DataSource = table
 
+                    'Set the colors
+                    NS.Visible = True
+                    NS.View.Color = SColor
+                    ChartHistorian.Series.Add(NS)
+                    If ChartHistorian.Series.Count = 1 Then
+                        'Add the series and configure primary Y axis
+
+                        ChartHistorian.Series(SName).View.Color = SColor
+                        diagram = ChartHistorian.Diagram
+                        diagram.AxisY.VisualRange.Auto = False
+                        diagram.AxisY.Color = SColor
+                        diagram.AxisY.WholeRange.Auto = False
+                        diagram.AxisY.WholeRange.MaxValue = SMax
+                        diagram.AxisY.WholeRange.MinValue = SMin
+                        diagram.AxisY.VisualRange.MaxValue = SMax
+                        diagram.AxisY.VisualRange.MinValue = SMin
+                        diagram.AxisY.WholeRange.SideMarginsValue = 0
+                        diagram.AxisY.VisualRange.SideMarginsValue = 0
+                        diagram.Margins.Left = 0
+                        diagram.Margins.Right = 0
+                    Else
+                        'Create Secondary Y Axis and it's properties.
+                        Dim SAxis As New SwiftPlotDiagramSecondaryAxisY(SName)
+                        SAxis.Color = SColor
+                        SAxis.WholeRange.Auto = False
+                        SAxis.VisualRange.Auto = False
+                        SAxis.WholeRange.MaxValue = SMax
+                        SAxis.WholeRange.MinValue = SMin
+                        SAxis.VisualRange.MaxValue = SMax
+                        SAxis.VisualRange.MinValue = SMin
+                        SAxis.WholeRange.SideMarginsValue = 0
+                        SAxis.VisualRange.SideMarginsValue = 0
+                        SAxis.Alignment = AxisAlignment.Near
+                        'Set secondary axis for this series
+                        CType(ChartHistorian.Diagram, SwiftPlotDiagram).SecondaryAxesY.Add(SAxis)
+                        'Add the series to the chart
+                        CType(ChartHistorian.Series(SName).View, SwiftPlotSeriesView).AxisY = SAxis
+                    End If
+                    'Set the series properties
+                    ChartHistorian.Series(SName).ArgumentScaleType = ScaleType.DateTime
+                    ChartHistorian.Series(SName).ArgumentDataMember = "DateTime"
+                    ChartHistorian.Series(SName).ValueScaleType = ScaleType.Numerical
+                    ChartHistorian.Series(SName).ValueDataMembers.AddRange(New String() {column.ColumnName})
                     ChartHistorian.Series(SName).View.Color = SColor
-                    diagram = ChartHistorian.Diagram
-                    diagram.AxisY.VisualRange.Auto = False
-                    diagram.AxisY.Color = SColor
-                    diagram.AxisY.WholeRange.Auto = False
-                    diagram.AxisY.WholeRange.MaxValue = SMax
-                    diagram.AxisY.WholeRange.MinValue = SMin
-                    diagram.AxisY.VisualRange.MaxValue = SMax
-                    diagram.AxisY.VisualRange.MinValue = SMin
-                    diagram.AxisY.WholeRange.SideMarginsValue = 0
-                    diagram.AxisY.VisualRange.SideMarginsValue = 0
-                    diagram.Margins.Left = 0
-                    diagram.Margins.Right = 0
-
-
-                Else
-                    'Create Secondary Y Axis and it's properties.
-                    Dim SAxis As New SwiftPlotDiagramSecondaryAxisY(SName)
-                    SAxis.Color = SColor
-                    SAxis.WholeRange.Auto = False
-                    SAxis.VisualRange.Auto = False
-                    SAxis.WholeRange.MaxValue = SMax
-                    SAxis.WholeRange.MinValue = SMin
-                    SAxis.VisualRange.MaxValue = SMax
-                    SAxis.VisualRange.MinValue = SMin
-                    SAxis.WholeRange.SideMarginsValue = 0
-                    SAxis.VisualRange.SideMarginsValue = 0
-                    SAxis.Alignment = AxisAlignment.Near
-                    'Set secondary axis for this series
-                    CType(ChartHistorian.Diagram, SwiftPlotDiagram).SecondaryAxesY.Add(SAxis)
-                    'Add the series to the chart
-                    CType(ChartHistorian.Series(SName).View, SwiftPlotSeriesView).AxisY = SAxis
                 End If
-                'Set the series properties
-                ChartHistorian.Series(SName).ArgumentScaleType = ScaleType.DateTime
-                ChartHistorian.Series(SName).ArgumentDataMember = "DateTime"
-                ChartHistorian.Series(SName).ValueScaleType = ScaleType.Numerical
-                ChartHistorian.Series(SName).ValueDataMembers.AddRange(New String() {column.ColumnName})
-                ChartHistorian.Series(SName).View.Color = SColor
-
-
-
-
-            End If
+            Next
         Next
 
+
+        Call SetDateTimeScaleOptionHistorianChart()
+        ChartHistorian.EndInit()
     End Sub
     Private Sub LogErrorMessage(Message As String, Location As String)
         Try
@@ -1325,5 +1480,40 @@ Public Class MainPage
         siStatus.Caption = ""
         tmrError.Enabled = False
     End Sub
+
+    Private Sub BarButtonItem3_ItemClick(sender As Object, e As ItemClickEventArgs) Handles BarButtonItem3.ItemClick
+        'Historian Configuration Button
+        Dim A As New ChartBuilder
+        A.Show()
+    End Sub
+    Private Sub SetDateTimeScaleOptionHistorianChart()
+        Try
+            Dim DD As SwiftPlotDiagram = ChartHistorian.Diagram
+            DD.AxisX.DateTimeScaleOptions.ScaleMode = ScaleMode.Manual
+            Select Case BarEditItem5.EditValue
+                Case "Seconds"
+                    DD.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Second
+                Case "Minutes"
+                    DD.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Minute
+                Case "Hours"
+                    DD.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Hour
+                Case "Days"
+                    DD.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Day
+                Case "Months"
+                    DD.AxisX.DateTimeScaleOptions.MeasureUnit = DateTimeMeasureUnit.Month
+
+
+            End Select
+
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub BarEditItem5_EditValueChanged(sender As Object, e As EventArgs) Handles BarEditItem5.EditValueChanged
+        Call SetDateTimeScaleOptionHistorianChart()
+
+    End Sub
+
+
 End Class
 

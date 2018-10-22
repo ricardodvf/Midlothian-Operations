@@ -31,6 +31,12 @@ Partial Class MainPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, Nothing, True, True, True)
+        Dim SwiftPlotDiagram1 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
+        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SwiftPlotSeriesView1 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView2 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainPage))
         Dim GalleryItemGroup1 As DevExpress.XtraBars.Ribbon.GalleryItemGroup = New DevExpress.XtraBars.Ribbon.GalleryItemGroup()
         Dim SpreadsheetCommandGalleryItem1 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
@@ -259,27 +265,27 @@ Partial Class MainPage
         Dim SpreadsheetCommandGalleryItem184 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
         Dim SpreadsheetCommandGalleryItem185 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
         Dim SpreadsheetCommandGalleryItem186 As DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem = New DevExpress.XtraSpreadsheet.UI.SpreadsheetCommandGalleryItem()
-        Dim SwiftPlotDiagram1 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
-        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView1 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotDiagram2 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
+        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SwiftPlotSeriesView3 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotDiagram3 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim SwiftPlotDiagramSecondaryAxisY1 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY2 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY3 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY4 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
-        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView2 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView3 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView4 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView5 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView6 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView7 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
-        Dim SwiftPlotDiagram3 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
+        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SwiftPlotSeriesView8 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView9 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim ChartTitle2 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim SwiftPlotDiagram4 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim SwiftPlotDiagramSecondaryAxisY5 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY6 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY7 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
@@ -288,27 +294,27 @@ Partial Class MainPage
         Dim SwiftPlotDiagramSecondaryAxisY10 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY11 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY12 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
-        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView8 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim Series8 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView9 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series9 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView10 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series10 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series9 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView11 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series11 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series10 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView12 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series12 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series11 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView13 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series13 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series12 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView14 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series14 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series13 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView15 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series15 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series14 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView16 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim Series15 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView17 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim ChartTitle2 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
-        Dim SwiftPlotDiagram4 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
+        Dim Series16 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SwiftPlotSeriesView18 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView19 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim ChartTitle3 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim SwiftPlotDiagram5 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim SwiftPlotDiagramSecondaryAxisY13 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY14 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY15 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
@@ -319,69 +325,68 @@ Partial Class MainPage
         Dim SwiftPlotDiagramSecondaryAxisY20 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY21 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
         Dim SwiftPlotDiagramSecondaryAxisY22 As DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY = New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY()
-        Dim Series16 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView18 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim Series17 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView19 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series18 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView20 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series19 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series18 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView21 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series20 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series19 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView22 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series21 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series20 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView23 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series22 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series21 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView24 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series23 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series22 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView25 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series24 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series23 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView26 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series25 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series24 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView27 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim Series26 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series25 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView28 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim Series26 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView29 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
-        Dim ChartTitle3 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
-        Dim SwiftPlotDiagram5 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series27 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim SwiftPlotSeriesView30 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView31 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle4 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram6 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series28 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView31 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView32 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView33 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle5 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram7 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series29 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView33 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView34 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView35 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle6 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram8 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series30 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView35 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView36 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView37 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle7 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram9 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series31 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView37 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView38 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView39 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle8 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram10 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series32 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView39 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView40 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView41 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle9 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram11 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series33 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView41 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView42 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView43 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle10 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
         Dim SwiftPlotDiagram12 As DevExpress.XtraCharts.SwiftPlotDiagram = New DevExpress.XtraCharts.SwiftPlotDiagram()
         Dim Series34 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SwiftPlotSeriesView43 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim SwiftPlotSeriesView44 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
+        Dim SwiftPlotSeriesView45 As DevExpress.XtraCharts.SwiftPlotSeriesView = New DevExpress.XtraCharts.SwiftPlotSeriesView()
         Dim ChartTitle11 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Me.DateTimeChartRangeControlClient1 = New DevExpress.XtraEditors.DateTimeChartRangeControlClient()
+        Me.ChartHistorian = New DevExpress.XtraCharts.ChartControl()
+        Me.LDMS7_MIDDataSet = New Midlothian_Operations.LDMS7_MIDDataSet()
         Me.BarAndDockingController1 = New DevExpress.XtraBars.BarAndDockingController(Me.components)
         Me.mailGroup = New DevExpress.XtraNavBar.NavBarGroup()
         Me.inboxItem = New DevExpress.XtraNavBar.NavBarItem()
@@ -426,6 +431,8 @@ Partial Class MainPage
         Me.BarCheckItem11 = New DevExpress.XtraBars.BarCheckItem()
         Me.BarCheckItem12 = New DevExpress.XtraBars.BarCheckItem()
         Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarEditItem5 = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.ribbonImageCollectionLarge = New DevExpress.Utils.ImageCollection(Me.components)
         Me.RibbonPageSkins = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -437,6 +444,7 @@ Partial Class MainPage
         Me.RepositoryItemFontEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemFontEdit()
         Me.RepositoryItemSpreadsheetFontSizeEdit1 = New DevExpress.XtraSpreadsheet.Design.RepositoryItemSpreadsheetFontSizeEdit()
         Me.RepositoryItemPopupGalleryEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit()
+        Me.RepositoryItemTextEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.ribbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.CommandBarGalleryDropDown1 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
         Me.CommandBarGalleryDropDown2 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
@@ -484,7 +492,6 @@ Partial Class MainPage
         Me.DigitalBackgroundLayerComponent10 = New DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent()
         Me.TabNavigationPage1 = New DevExpress.XtraBars.Navigation.TabNavigationPage()
         Me.FM6Chart2 = New DevExpress.XtraCharts.ChartControl()
-        Me.LDMS7_MIDDataSet = New Midlothian_Operations.LDMS7_MIDDataSet()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -551,8 +558,8 @@ Partial Class MainPage
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.KilnChart = New DevExpress.XtraCharts.ChartControl()
         Me.TabNavigationPage4 = New DevExpress.XtraBars.Navigation.TabNavigationPage()
+        Me.ProgressPanel1 = New DevExpress.XtraWaitForm.ProgressPanel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.ChartHistorian = New DevExpress.XtraCharts.ChartControl()
         Me.TabNavigationPage5 = New DevExpress.XtraBars.Navigation.TabNavigationPage()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PHTChart = New DevExpress.XtraCharts.ChartControl()
@@ -603,6 +610,15 @@ Partial Class MainPage
         Me.tmrError = New System.Windows.Forms.Timer(Me.components)
         Me.BarEditItem3 = New DevExpress.XtraBars.BarEditItem()
         Me.BarEditItem4 = New DevExpress.XtraBars.BarEditItem()
+        Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
+        Me.bgwUpdateHistorian = New System.ComponentModel.BackgroundWorker()
+        CType(Me.DateTimeChartRangeControlClient1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartHistorian, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollectionLarge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navbarImageCollection, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -613,11 +629,13 @@ Partial Class MainPage
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ribbonImageCollectionLarge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemSpreadsheetFontSizeEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemPopupGalleryEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemTextEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CommandBarGalleryDropDown3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -663,28 +681,27 @@ Partial Class MainPage
         CType(Me.DigitalBackgroundLayerComponent10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage1.SuspendLayout()
         CType(Me.FM6Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM6Chart, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotDiagram3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalGauge22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalBackgroundLayerComponent29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DigitalGauge21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -712,7 +729,7 @@ Partial Class MainPage
         Me.TabNavigationPage2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VRMChart, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotDiagram3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotDiagram4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -721,29 +738,29 @@ Partial Class MainPage
         CType(SwiftPlotDiagramSecondaryAxisY10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage3.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KilnChart, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotDiagram4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotDiagram5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY15, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -754,88 +771,128 @@ Partial Class MainPage
         CType(SwiftPlotDiagramSecondaryAxisY20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagramSecondaryAxisY22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView20, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView21, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView23, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView24, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView25, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView26, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series25, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series26, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series25, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView28, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series26, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView29, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabNavigationPage4.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartHistorian, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotDiagram5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView31, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabNavigationPage4.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage5.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PHTChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView33, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage6.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CoolerChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView33, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView35, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage7.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM1Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView37, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage8.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM2Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView39, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage9.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM3Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView41, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage10.SuspendLayout()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM4Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView43, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabNavigationPage11.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FM5Chart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotDiagram12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SwiftPlotSeriesView43, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SwiftPlotSeriesView44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SwiftPlotSeriesView45, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HistoryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnalogHistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AnalogHistoryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SplashScreenManager1
+        '
+        SplashScreenManager1.ClosingDelay = 500
+        '
+        'ChartHistorian
+        '
+        Me.ChartHistorian.AppearanceNameSerializable = "Dark"
+        Me.ChartHistorian.CacheToMemory = True
+        Me.ChartHistorian.CrosshairOptions.ShowArgumentLabels = True
+        Me.ChartHistorian.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
+        SwiftPlotDiagram1.AxisX.CrosshairAxisLabelOptions.Pattern = "{A:dddd, MMMM d, yyyy H:mm:ss}"
+        SwiftPlotDiagram1.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Automatic
+        SwiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
+        SwiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram1.DefaultPane.BackColor = System.Drawing.Color.Black
+        Me.ChartHistorian.Diagram = SwiftPlotDiagram1
+        Me.ChartHistorian.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ChartHistorian.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
+        Me.ChartHistorian.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
+        Me.ChartHistorian.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight
+        Me.ChartHistorian.Location = New System.Drawing.Point(0, 0)
+        Me.ChartHistorian.Name = "ChartHistorian"
+        Me.ChartHistorian.PaletteBaseColorNumber = 2
+        Me.ChartHistorian.PaletteName = "Default"
+        Me.ChartHistorian.RefreshDataOnRepaint = False
+        Series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series1.Name = "SeriesHistorian"
+        Series1.View = SwiftPlotSeriesView1
+        Me.ChartHistorian.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.ChartHistorian.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Me.ChartHistorian.SeriesTemplate.View = SwiftPlotSeriesView2
+        Me.ChartHistorian.Size = New System.Drawing.Size(1912, 880)
+        Me.ChartHistorian.TabIndex = 0
+        ChartTitle1.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartTitle1.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Historian Trend"
+        Me.ChartHistorian.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
+        '
+        'LDMS7_MIDDataSet
+        '
+        Me.LDMS7_MIDDataSet.DataSetName = "LDMS7_MIDDataSet"
+        Me.LDMS7_MIDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BarAndDockingController1
         '
@@ -907,18 +964,18 @@ Partial Class MainPage
         Me.ribbonControl.Controller = Me.BarAndDockingController1
         Me.ribbonControl.ExpandCollapseItem.Id = 0
         Me.ribbonControl.Images = Me.ribbonImageCollection
-        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.iExit, Me.iHelp, Me.iAbout, Me.siStatus, Me.siInfo, Me.rgbiSkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarHeaderItem1, Me.DTPFrom, Me.DTPTo, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarCheckItem1, Me.BarCheckItem2, Me.BarCheckItem3, Me.BarCheckItem4, Me.BarCheckItem5, Me.BarCheckItem6, Me.BarCheckItem7, Me.BarCheckItem8, Me.BarCheckItem9, Me.BarCheckItem10, Me.BarCheckItem11, Me.BarCheckItem12, Me.BarButtonItem8})
+        Me.ribbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl.ExpandCollapseItem, Me.iExit, Me.iHelp, Me.iAbout, Me.siStatus, Me.siInfo, Me.rgbiSkins, Me.BarButtonItem1, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarHeaderItem1, Me.DTPFrom, Me.DTPTo, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarCheckItem1, Me.BarCheckItem2, Me.BarCheckItem3, Me.BarCheckItem4, Me.BarCheckItem5, Me.BarCheckItem6, Me.BarCheckItem7, Me.BarCheckItem8, Me.BarCheckItem9, Me.BarCheckItem10, Me.BarCheckItem11, Me.BarCheckItem12, Me.BarButtonItem8, Me.BarEditItem5})
         Me.ribbonControl.LargeImages = Me.ribbonImageCollectionLarge
         Me.ribbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.ribbonControl.MaxItemId = 403
+        Me.ribbonControl.MaxItemId = 406
         Me.ribbonControl.Name = "ribbonControl"
         Me.ribbonControl.PageHeaderItemLinks.Add(Me.iAbout)
         Me.ribbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPageSkins, Me.RibbonPage1})
-        Me.ribbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemFontEdit1, Me.RepositoryItemSpreadsheetFontSizeEdit1, Me.RepositoryItemPopupGalleryEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2})
+        Me.ribbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemFontEdit1, Me.RepositoryItemSpreadsheetFontSizeEdit1, Me.RepositoryItemPopupGalleryEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemTextEdit2, Me.RepositoryItemComboBox1})
         Me.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010
         Me.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[True]
         Me.ribbonControl.ShowToolbarCustomizeItem = False
-        Me.ribbonControl.Size = New System.Drawing.Size(1654, 143)
+        Me.ribbonControl.Size = New System.Drawing.Size(1930, 143)
         Me.ribbonControl.StatusBar = Me.ribbonStatusBar
         Me.ribbonControl.Toolbar.ShowCustomizeItem = False
         '
@@ -1215,6 +1272,25 @@ Partial Class MainPage
         Me.BarButtonItem8.Name = "BarButtonItem8"
         Me.BarButtonItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BarEditItem5
+        '
+        Me.BarEditItem5.Caption = "Resolution"
+        Me.BarEditItem5.Edit = Me.RepositoryItemComboBox1
+        Me.BarEditItem5.EditHeight = 40
+        Me.BarEditItem5.EditValue = "Seconds"
+        Me.BarEditItem5.EditWidth = 100
+        Me.BarEditItem5.Id = 405
+        Me.BarEditItem5.Name = "BarEditItem5"
+        Me.BarEditItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'RepositoryItemComboBox1
+        '
+        Me.RepositoryItemComboBox1.AutoHeight = False
+        Me.RepositoryItemComboBox1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemComboBox1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003
+        Me.RepositoryItemComboBox1.Items.AddRange(New Object() {"Seconds", "Minutes", "Hours", "Days", "Months"})
+        Me.RepositoryItemComboBox1.Name = "RepositoryItemComboBox1"
+        '
         'ribbonImageCollectionLarge
         '
         Me.ribbonImageCollectionLarge.ImageSize = New System.Drawing.Size(32, 32)
@@ -1239,6 +1315,8 @@ Partial Class MainPage
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem3)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.DTPFrom)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.DTPTo)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem8)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarEditItem5)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.Text = "Historian"
         '
@@ -1268,7 +1346,6 @@ Partial Class MainPage
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem10)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem11)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.BarCheckItem12)
-        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem8)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Active Trends for Real Time Update"
         '
@@ -1381,14 +1458,19 @@ Partial Class MainPage
         Me.RepositoryItemPopupGalleryEdit1.ShowPopupCloseButton = False
         Me.RepositoryItemPopupGalleryEdit1.ShowSizeGrip = False
         '
+        'RepositoryItemTextEdit2
+        '
+        Me.RepositoryItemTextEdit2.AutoHeight = False
+        Me.RepositoryItemTextEdit2.Name = "RepositoryItemTextEdit2"
+        '
         'ribbonStatusBar
         '
         Me.ribbonStatusBar.ItemLinks.Add(Me.siStatus)
         Me.ribbonStatusBar.ItemLinks.Add(Me.siInfo)
-        Me.ribbonStatusBar.Location = New System.Drawing.Point(0, 862)
+        Me.ribbonStatusBar.Location = New System.Drawing.Point(0, 1068)
         Me.ribbonStatusBar.Name = "ribbonStatusBar"
         Me.ribbonStatusBar.Ribbon = Me.ribbonControl
-        Me.ribbonStatusBar.Size = New System.Drawing.Size(1654, 31)
+        Me.ribbonStatusBar.Size = New System.Drawing.Size(1930, 31)
         '
         'CommandBarGalleryDropDown1
         '
@@ -2917,33 +2999,30 @@ Partial Class MainPage
         Me.TabNavigationPage1.Controls.Add(Me.Label2)
         Me.TabNavigationPage1.Controls.Add(Me.Label1)
         Me.TabNavigationPage1.Name = "TabNavigationPage1"
-        Me.TabNavigationPage1.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage1.Size = New System.Drawing.Size(1912, 880)
         '
         'FM6Chart2
         '
         Me.FM6Chart2.AppearanceNameSerializable = "Dark"
+        Me.FM6Chart2.CacheToMemory = True
         Me.FM6Chart2.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
-        SwiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
-        SwiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram1.DefaultPane.BackColor = System.Drawing.Color.Black
-        Me.FM6Chart2.Diagram = SwiftPlotDiagram1
+        SwiftPlotDiagram2.AxisX.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
+        SwiftPlotDiagram2.AxisY.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram2.DefaultPane.BackColor = System.Drawing.Color.Black
+        Me.FM6Chart2.Diagram = SwiftPlotDiagram2
         Me.FM6Chart2.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
         Me.FM6Chart2.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
         Me.FM6Chart2.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight
         Me.FM6Chart2.Location = New System.Drawing.Point(564, 379)
         Me.FM6Chart2.Name = "FM6Chart2"
         Me.FM6Chart2.PaletteName = "Default"
-        Series1.Name = "Chart1FM6Series"
-        Series1.View = SwiftPlotSeriesView1
-        Me.FM6Chart2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.FM6Chart2.RefreshDataOnRepaint = False
+        Series2.Name = "Chart1FM6Series"
+        Series2.View = SwiftPlotSeriesView3
+        Me.FM6Chart2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2}
         Me.FM6Chart2.Size = New System.Drawing.Size(1325, 288)
         Me.FM6Chart2.TabIndex = 47
-        '
-        'LDMS7_MIDDataSet
-        '
-        Me.LDMS7_MIDDataSet.DataSetName = "LDMS7_MIDDataSet"
-        Me.LDMS7_MIDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label27
         '
@@ -3156,6 +3235,7 @@ Partial Class MainPage
         '
         'PictureBox1
         '
+        Me.PictureBox1.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox1.Location = New System.Drawing.Point(1720, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(172, 82)
@@ -3167,25 +3247,26 @@ Partial Class MainPage
         '
         Me.FM6Chart.AppearanceNameSerializable = "Dark"
         Me.FM6Chart.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.FM6Chart.CacheToMemory = True
         Me.FM6Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
-        SwiftPlotDiagram2.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
-        SwiftPlotDiagram2.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
-        SwiftPlotDiagram2.AxisX.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram2.AxisY.Color = System.Drawing.Color.Red
-        SwiftPlotDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
-        SwiftPlotDiagram2.AxisY.Title.Text = "FM 6TPH"
-        SwiftPlotDiagram2.AxisY.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram2.AxisY.VisualRange.Auto = False
-        SwiftPlotDiagram2.AxisY.VisualRange.AutoSideMargins = False
-        SwiftPlotDiagram2.AxisY.VisualRange.MaxValueSerializable = "175"
-        SwiftPlotDiagram2.AxisY.VisualRange.MinValueSerializable = "145"
-        SwiftPlotDiagram2.AxisY.VisualRange.SideMarginsValue = 0R
-        SwiftPlotDiagram2.AxisY.WholeRange.Auto = False
-        SwiftPlotDiagram2.AxisY.WholeRange.AutoSideMargins = False
-        SwiftPlotDiagram2.AxisY.WholeRange.MaxValueSerializable = "175"
-        SwiftPlotDiagram2.AxisY.WholeRange.MinValueSerializable = "145"
-        SwiftPlotDiagram2.AxisY.WholeRange.SideMarginsValue = 0R
-        SwiftPlotDiagram2.DefaultPane.BackColor = System.Drawing.Color.Black
+        SwiftPlotDiagram3.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
+        SwiftPlotDiagram3.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
+        SwiftPlotDiagram3.AxisX.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram3.AxisY.Color = System.Drawing.Color.Red
+        SwiftPlotDiagram3.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
+        SwiftPlotDiagram3.AxisY.Title.Text = "FM 6TPH"
+        SwiftPlotDiagram3.AxisY.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram3.AxisY.VisualRange.Auto = False
+        SwiftPlotDiagram3.AxisY.VisualRange.AutoSideMargins = False
+        SwiftPlotDiagram3.AxisY.VisualRange.MaxValueSerializable = "175"
+        SwiftPlotDiagram3.AxisY.VisualRange.MinValueSerializable = "145"
+        SwiftPlotDiagram3.AxisY.VisualRange.SideMarginsValue = 0R
+        SwiftPlotDiagram3.AxisY.WholeRange.Auto = False
+        SwiftPlotDiagram3.AxisY.WholeRange.AutoSideMargins = False
+        SwiftPlotDiagram3.AxisY.WholeRange.MaxValueSerializable = "175"
+        SwiftPlotDiagram3.AxisY.WholeRange.MinValueSerializable = "145"
+        SwiftPlotDiagram3.AxisY.WholeRange.SideMarginsValue = 0R
+        SwiftPlotDiagram3.DefaultPane.BackColor = System.Drawing.Color.Black
         SwiftPlotDiagramSecondaryAxisY1.Alignment = DevExpress.XtraCharts.AxisAlignment.Near
         SwiftPlotDiagramSecondaryAxisY1.AxisID = 0
         SwiftPlotDiagramSecondaryAxisY1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -3230,8 +3311,8 @@ Partial Class MainPage
         SwiftPlotDiagramSecondaryAxisY4.DateTimeScaleOptions.GridSpacing = 2.0R
         SwiftPlotDiagramSecondaryAxisY4.Name = "Secondary AxisY 4"
         SwiftPlotDiagramSecondaryAxisY4.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram2.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY1, SwiftPlotDiagramSecondaryAxisY2, SwiftPlotDiagramSecondaryAxisY3, SwiftPlotDiagramSecondaryAxisY4})
-        Me.FM6Chart.Diagram = SwiftPlotDiagram2
+        SwiftPlotDiagram3.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY1, SwiftPlotDiagramSecondaryAxisY2, SwiftPlotDiagramSecondaryAxisY3, SwiftPlotDiagramSecondaryAxisY4})
+        Me.FM6Chart.Diagram = SwiftPlotDiagram3
         Me.FM6Chart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
         Me.FM6Chart.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
         Me.FM6Chart.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight
@@ -3239,33 +3320,34 @@ Partial Class MainPage
         Me.FM6Chart.Name = "FM6Chart"
         Me.FM6Chart.PaletteBaseColorNumber = 3
         Me.FM6Chart.PaletteName = "Default"
-        Series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series2.Name = "FM6 TPH"
-        SwiftPlotSeriesView2.LineStyle.Thickness = 2
-        Series2.View = SwiftPlotSeriesView2
-        Series3.Name = "Mill KW"
-        SwiftPlotSeriesView3.AxisYName = "Secondary AxisY 1"
-        SwiftPlotSeriesView3.LineStyle.Thickness = 2
-        Series3.View = SwiftPlotSeriesView3
-        Series4.Name = "Slide Shoe Brg 10"
-        SwiftPlotSeriesView4.AxisYName = "Secondary AxisY 2"
+        Me.FM6Chart.RefreshDataOnRepaint = False
+        Series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series3.Name = "FM6 TPH"
         SwiftPlotSeriesView4.LineStyle.Thickness = 2
-        Series4.View = SwiftPlotSeriesView4
-        Series5.Name = "Bucket Elevator KW"
-        SwiftPlotSeriesView5.AxisYName = "Secondary AxisY 3"
+        Series3.View = SwiftPlotSeriesView4
+        Series4.Name = "Mill KW"
+        SwiftPlotSeriesView5.AxisYName = "Secondary AxisY 1"
         SwiftPlotSeriesView5.LineStyle.Thickness = 2
-        Series5.View = SwiftPlotSeriesView5
-        Series6.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series6.Name = "Separator Speed"
-        SwiftPlotSeriesView6.AxisYName = "Secondary AxisY 4"
+        Series4.View = SwiftPlotSeriesView5
+        Series5.Name = "Slide Shoe Brg 10"
+        SwiftPlotSeriesView6.AxisYName = "Secondary AxisY 2"
         SwiftPlotSeriesView6.LineStyle.Thickness = 2
-        Series6.View = SwiftPlotSeriesView6
-        Me.FM6Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3, Series4, Series5, Series6}
-        Me.FM6Chart.SeriesTemplate.View = SwiftPlotSeriesView7
+        Series5.View = SwiftPlotSeriesView6
+        Series6.Name = "Bucket Elevator KW"
+        SwiftPlotSeriesView7.AxisYName = "Secondary AxisY 3"
+        SwiftPlotSeriesView7.LineStyle.Thickness = 2
+        Series6.View = SwiftPlotSeriesView7
+        Series7.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series7.Name = "Separator Speed"
+        SwiftPlotSeriesView8.AxisYName = "Secondary AxisY 4"
+        SwiftPlotSeriesView8.LineStyle.Thickness = 2
+        Series7.View = SwiftPlotSeriesView8
+        Me.FM6Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series3, Series4, Series5, Series6, Series7}
+        Me.FM6Chart.SeriesTemplate.View = SwiftPlotSeriesView9
         Me.FM6Chart.Size = New System.Drawing.Size(1325, 348)
         Me.FM6Chart.TabIndex = 29
-        ChartTitle1.Text = "Finish Mill # 6 Operation"
-        Me.FM6Chart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
+        ChartTitle2.Text = "Finish Mill # 6 Operation"
+        Me.FM6Chart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle2})
         '
         'GaugeControl14
         '
@@ -3656,9 +3738,9 @@ Partial Class MainPage
         Me.CCh.Location = New System.Drawing.Point(0, 143)
         Me.CCh.Name = "CCh"
         Me.CCh.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.TabNavigationPage1, Me.TabNavigationPage2, Me.TabNavigationPage3, Me.TabNavigationPage5, Me.TabNavigationPage6, Me.TabNavigationPage7, Me.TabNavigationPage8, Me.TabNavigationPage9, Me.TabNavigationPage10, Me.TabNavigationPage11, Me.TabNavigationPage12, Me.TabNavigationPage4})
-        Me.CCh.RegularSize = New System.Drawing.Size(1654, 719)
+        Me.CCh.RegularSize = New System.Drawing.Size(1930, 925)
         Me.CCh.SelectedPage = Me.TabNavigationPage1
-        Me.CCh.Size = New System.Drawing.Size(1654, 719)
+        Me.CCh.Size = New System.Drawing.Size(1930, 925)
         Me.CCh.TabIndex = 7
         Me.CCh.Text = "TabPane1"
         '
@@ -3668,11 +3750,12 @@ Partial Class MainPage
         Me.TabNavigationPage2.Controls.Add(Me.PictureBox2)
         Me.TabNavigationPage2.Controls.Add(Me.VRMChart)
         Me.TabNavigationPage2.Name = "TabNavigationPage2"
-        Me.TabNavigationPage2.Size = New System.Drawing.Size(1635, 671)
+        Me.TabNavigationPage2.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox2.Location = New System.Drawing.Point(1711, 13)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(172, 82)
@@ -3685,14 +3768,15 @@ Partial Class MainPage
         Me.VRMChart.AppearanceNameSerializable = "Dark Flat"
         Me.VRMChart.BackColor = System.Drawing.Color.Black
         Me.VRMChart.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.[False]
+        Me.VRMChart.CacheToMemory = True
         Me.VRMChart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
-        SwiftPlotDiagram3.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
-        SwiftPlotDiagram3.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
-        SwiftPlotDiagram3.AxisX.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram3.AxisY.Color = System.Drawing.Color.Red
-        SwiftPlotDiagram3.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
-        SwiftPlotDiagram3.AxisY.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram3.DefaultPane.BackColor = System.Drawing.Color.Black
+        SwiftPlotDiagram4.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
+        SwiftPlotDiagram4.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
+        SwiftPlotDiagram4.AxisX.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram4.AxisY.Color = System.Drawing.Color.Red
+        SwiftPlotDiagram4.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
+        SwiftPlotDiagram4.AxisY.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram4.DefaultPane.BackColor = System.Drawing.Color.Black
         SwiftPlotDiagramSecondaryAxisY5.Alignment = DevExpress.XtraCharts.AxisAlignment.Near
         SwiftPlotDiagramSecondaryAxisY5.AxisID = 0
         SwiftPlotDiagramSecondaryAxisY5.Color = System.Drawing.Color.Blue
@@ -3782,8 +3866,8 @@ Partial Class MainPage
         SwiftPlotDiagramSecondaryAxisY12.WholeRange.Auto = False
         SwiftPlotDiagramSecondaryAxisY12.WholeRange.MaxValueSerializable = "130"
         SwiftPlotDiagramSecondaryAxisY12.WholeRange.MinValueSerializable = "70"
-        SwiftPlotDiagram3.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY5, SwiftPlotDiagramSecondaryAxisY6, SwiftPlotDiagramSecondaryAxisY7, SwiftPlotDiagramSecondaryAxisY8, SwiftPlotDiagramSecondaryAxisY9, SwiftPlotDiagramSecondaryAxisY10, SwiftPlotDiagramSecondaryAxisY11, SwiftPlotDiagramSecondaryAxisY12})
-        Me.VRMChart.Diagram = SwiftPlotDiagram3
+        SwiftPlotDiagram4.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY5, SwiftPlotDiagramSecondaryAxisY6, SwiftPlotDiagramSecondaryAxisY7, SwiftPlotDiagramSecondaryAxisY8, SwiftPlotDiagramSecondaryAxisY9, SwiftPlotDiagramSecondaryAxisY10, SwiftPlotDiagramSecondaryAxisY11, SwiftPlotDiagramSecondaryAxisY12})
+        Me.VRMChart.Diagram = SwiftPlotDiagram4
         Me.VRMChart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VRMChart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
         Me.VRMChart.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
@@ -3792,44 +3876,45 @@ Partial Class MainPage
         Me.VRMChart.Name = "VRMChart"
         Me.VRMChart.PaletteBaseColorNumber = 4
         Me.VRMChart.PaletteName = "Chameleon"
-        Series7.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series7.Name = "Feed (AF speed)"
-        SwiftPlotSeriesView8.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        SwiftPlotSeriesView8.LineStyle.Thickness = 2
-        Series7.View = SwiftPlotSeriesView8
+        Me.VRMChart.RefreshDataOnRepaint = False
         Series8.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series8.Name = "Outlet Temperature"
-        SwiftPlotSeriesView9.LineStyle.Thickness = 2
-        Series8.View = SwiftPlotSeriesView9
-        Series9.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series9.Name = "Inlet Temperature"
+        Series8.Name = "Feed (AF speed)"
+        SwiftPlotSeriesView10.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         SwiftPlotSeriesView10.LineStyle.Thickness = 2
-        Series9.View = SwiftPlotSeriesView10
-        Series10.Name = "RM Vibration"
+        Series8.View = SwiftPlotSeriesView10
+        Series9.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series9.Name = "Outlet Temperature"
         SwiftPlotSeriesView11.LineStyle.Thickness = 2
-        Series10.View = SwiftPlotSeriesView11
-        Series11.Name = "Separator Speed"
+        Series9.View = SwiftPlotSeriesView11
+        Series10.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series10.Name = "Inlet Temperature"
         SwiftPlotSeriesView12.LineStyle.Thickness = 2
-        Series11.View = SwiftPlotSeriesView12
-        Series12.Name = "RM Fan KW"
+        Series10.View = SwiftPlotSeriesView12
+        Series11.Name = "RM Vibration"
         SwiftPlotSeriesView13.LineStyle.Thickness = 2
-        Series12.View = SwiftPlotSeriesView13
-        Series13.Name = "RM Fan Damper"
+        Series11.View = SwiftPlotSeriesView13
+        Series12.Name = "Separator Speed"
         SwiftPlotSeriesView14.LineStyle.Thickness = 2
-        Series13.View = SwiftPlotSeriesView14
-        Series14.Name = "Inlet Pressure"
+        Series12.View = SwiftPlotSeriesView14
+        Series13.Name = "RM Fan KW"
         SwiftPlotSeriesView15.LineStyle.Thickness = 2
-        Series14.View = SwiftPlotSeriesView15
-        Series15.Name = "Gamma C3S"
+        Series13.View = SwiftPlotSeriesView15
+        Series14.Name = "RM Fan Damper"
         SwiftPlotSeriesView16.LineStyle.Thickness = 2
-        Series15.View = SwiftPlotSeriesView16
-        Me.VRMChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series7, Series8, Series9, Series10, Series11, Series12, Series13, Series14, Series15}
-        Me.VRMChart.SeriesTemplate.View = SwiftPlotSeriesView17
-        Me.VRMChart.Size = New System.Drawing.Size(1635, 671)
+        Series14.View = SwiftPlotSeriesView16
+        Series15.Name = "Inlet Pressure"
+        SwiftPlotSeriesView17.LineStyle.Thickness = 2
+        Series15.View = SwiftPlotSeriesView17
+        Series16.Name = "Gamma C3S"
+        SwiftPlotSeriesView18.LineStyle.Thickness = 2
+        Series16.View = SwiftPlotSeriesView18
+        Me.VRMChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series8, Series9, Series10, Series11, Series12, Series13, Series14, Series15, Series16}
+        Me.VRMChart.SeriesTemplate.View = SwiftPlotSeriesView19
+        Me.VRMChart.Size = New System.Drawing.Size(1912, 880)
         Me.VRMChart.TabIndex = 15
-        ChartTitle2.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartTitle2.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Raw Mill Operations"
-        Me.VRMChart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle2})
+        ChartTitle3.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartTitle3.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Raw Mill Operations"
+        Me.VRMChart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle3})
         '
         'TabNavigationPage3
         '
@@ -3837,10 +3922,11 @@ Partial Class MainPage
         Me.TabNavigationPage3.Controls.Add(Me.PictureBox3)
         Me.TabNavigationPage3.Controls.Add(Me.KilnChart)
         Me.TabNavigationPage3.Name = "TabNavigationPage3"
-        Me.TabNavigationPage3.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage3.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox3
         '
+        Me.PictureBox3.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox3.Location = New System.Drawing.Point(1701, 13)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(172, 82)
@@ -3851,20 +3937,21 @@ Partial Class MainPage
         'KilnChart
         '
         Me.KilnChart.AppearanceNameSerializable = "Dark"
+        Me.KilnChart.CacheToMemory = True
         Me.KilnChart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
-        SwiftPlotDiagram4.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
-        SwiftPlotDiagram4.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
-        SwiftPlotDiagram4.AxisX.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram4.AxisY.Color = System.Drawing.Color.Red
-        SwiftPlotDiagram4.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
-        SwiftPlotDiagram4.AxisY.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram4.AxisY.VisualRange.Auto = False
-        SwiftPlotDiagram4.AxisY.VisualRange.MaxValueSerializable = "520"
-        SwiftPlotDiagram4.AxisY.VisualRange.MinValueSerializable = "350"
-        SwiftPlotDiagram4.AxisY.WholeRange.Auto = False
-        SwiftPlotDiagram4.AxisY.WholeRange.MaxValueSerializable = "550"
-        SwiftPlotDiagram4.AxisY.WholeRange.MinValueSerializable = "350"
-        SwiftPlotDiagram4.DefaultPane.BackColor = System.Drawing.Color.Black
+        SwiftPlotDiagram5.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
+        SwiftPlotDiagram5.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
+        SwiftPlotDiagram5.AxisX.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram5.AxisY.Color = System.Drawing.Color.Red
+        SwiftPlotDiagram5.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
+        SwiftPlotDiagram5.AxisY.VisibleInPanesSerializable = "-1"
+        SwiftPlotDiagram5.AxisY.VisualRange.Auto = False
+        SwiftPlotDiagram5.AxisY.VisualRange.MaxValueSerializable = "520"
+        SwiftPlotDiagram5.AxisY.VisualRange.MinValueSerializable = "350"
+        SwiftPlotDiagram5.AxisY.WholeRange.Auto = False
+        SwiftPlotDiagram5.AxisY.WholeRange.MaxValueSerializable = "550"
+        SwiftPlotDiagram5.AxisY.WholeRange.MinValueSerializable = "350"
+        SwiftPlotDiagram5.DefaultPane.BackColor = System.Drawing.Color.Black
         SwiftPlotDiagramSecondaryAxisY13.Alignment = DevExpress.XtraCharts.AxisAlignment.Near
         SwiftPlotDiagramSecondaryAxisY13.AxisID = 0
         SwiftPlotDiagramSecondaryAxisY13.Color = System.Drawing.Color.Blue
@@ -3969,8 +4056,8 @@ Partial Class MainPage
         SwiftPlotDiagramSecondaryAxisY22.WholeRange.Auto = False
         SwiftPlotDiagramSecondaryAxisY22.WholeRange.MaxValueSerializable = "600000"
         SwiftPlotDiagramSecondaryAxisY22.WholeRange.MinValueSerializable = "0"
-        SwiftPlotDiagram4.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY13, SwiftPlotDiagramSecondaryAxisY14, SwiftPlotDiagramSecondaryAxisY15, SwiftPlotDiagramSecondaryAxisY16, SwiftPlotDiagramSecondaryAxisY17, SwiftPlotDiagramSecondaryAxisY18, SwiftPlotDiagramSecondaryAxisY19, SwiftPlotDiagramSecondaryAxisY20, SwiftPlotDiagramSecondaryAxisY21, SwiftPlotDiagramSecondaryAxisY22})
-        Me.KilnChart.Diagram = SwiftPlotDiagram4
+        SwiftPlotDiagram5.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SwiftPlotDiagramSecondaryAxisY() {SwiftPlotDiagramSecondaryAxisY13, SwiftPlotDiagramSecondaryAxisY14, SwiftPlotDiagramSecondaryAxisY15, SwiftPlotDiagramSecondaryAxisY16, SwiftPlotDiagramSecondaryAxisY17, SwiftPlotDiagramSecondaryAxisY18, SwiftPlotDiagramSecondaryAxisY19, SwiftPlotDiagramSecondaryAxisY20, SwiftPlotDiagramSecondaryAxisY21, SwiftPlotDiagramSecondaryAxisY22})
+        Me.KilnChart.Diagram = SwiftPlotDiagram5
         Me.KilnChart.Dock = System.Windows.Forms.DockStyle.Fill
         Me.KilnChart.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
         Me.KilnChart.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
@@ -3978,65 +4065,84 @@ Partial Class MainPage
         Me.KilnChart.Location = New System.Drawing.Point(0, 0)
         Me.KilnChart.Name = "KilnChart"
         Me.KilnChart.PaletteName = "Default"
-        Series16.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series16.Name = "Feed (TPH)"
-        SwiftPlotSeriesView18.LineStyle.Thickness = 2
-        Series16.View = SwiftPlotSeriesView18
+        Me.KilnChart.RefreshDataOnRepaint = False
         Series17.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series17.Name = "Amps"
-        SwiftPlotSeriesView19.LineStyle.Thickness = 2
-        Series17.View = SwiftPlotSeriesView19
-        Series18.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series18.Name = "ID Fan # 1 Speed"
+        Series17.Name = "Feed (TPH)"
         SwiftPlotSeriesView20.LineStyle.Thickness = 2
-        Series18.View = SwiftPlotSeriesView20
-        Series19.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series19.Name = "ID Fan # 2 Speed"
+        Series17.View = SwiftPlotSeriesView20
+        Series18.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series18.Name = "Amps"
         SwiftPlotSeriesView21.LineStyle.Thickness = 2
-        Series19.View = SwiftPlotSeriesView21
-        Series20.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series20.Name = "1st Stage Temp"
+        Series18.View = SwiftPlotSeriesView21
+        Series19.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series19.Name = "ID Fan # 1 Speed"
         SwiftPlotSeriesView22.LineStyle.Thickness = 2
-        Series20.View = SwiftPlotSeriesView22
-        Series21.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series21.Name = "4th stage Temp"
+        Series19.View = SwiftPlotSeriesView22
+        Series20.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series20.Name = "ID Fan # 2 Speed"
         SwiftPlotSeriesView23.LineStyle.Thickness = 2
-        Series21.View = SwiftPlotSeriesView23
-        Series22.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series22.Name = "PW1 TPH"
+        Series20.View = SwiftPlotSeriesView23
+        Series21.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series21.Name = "1st Stage Temp"
         SwiftPlotSeriesView24.LineStyle.Thickness = 2
-        Series22.View = SwiftPlotSeriesView24
-        Series23.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series23.Name = "PW2 TPH"
+        Series21.View = SwiftPlotSeriesView24
+        Series22.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series22.Name = "4th stage Temp"
         SwiftPlotSeriesView25.LineStyle.Thickness = 2
-        Series23.View = SwiftPlotSeriesView25
-        Series24.Name = "PW3 TPH"
+        Series22.View = SwiftPlotSeriesView25
+        Series23.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series23.Name = "PW1 TPH"
         SwiftPlotSeriesView26.LineStyle.Thickness = 2
-        Series24.View = SwiftPlotSeriesView26
-        Series25.Name = "Gas Kiln"
+        Series23.View = SwiftPlotSeriesView26
+        Series24.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series24.Name = "PW2 TPH"
         SwiftPlotSeriesView27.LineStyle.Thickness = 2
-        Series25.View = SwiftPlotSeriesView27
-        Series26.Name = "Gas Calciner"
+        Series24.View = SwiftPlotSeriesView27
+        Series25.Name = "PW3 TPH"
         SwiftPlotSeriesView28.LineStyle.Thickness = 2
-        Series26.View = SwiftPlotSeriesView28
-        Me.KilnChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series16, Series17, Series18, Series19, Series20, Series21, Series22, Series23, Series24, Series25, Series26}
-        Me.KilnChart.SeriesTemplate.View = SwiftPlotSeriesView29
-        Me.KilnChart.Size = New System.Drawing.Size(1636, 674)
+        Series25.View = SwiftPlotSeriesView28
+        Series26.Name = "Gas Kiln"
+        SwiftPlotSeriesView29.LineStyle.Thickness = 2
+        Series26.View = SwiftPlotSeriesView29
+        Series27.Name = "Gas Calciner"
+        SwiftPlotSeriesView30.LineStyle.Thickness = 2
+        Series27.View = SwiftPlotSeriesView30
+        Me.KilnChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series17, Series18, Series19, Series20, Series21, Series22, Series23, Series24, Series25, Series26, Series27}
+        Me.KilnChart.SeriesTemplate.View = SwiftPlotSeriesView31
+        Me.KilnChart.Size = New System.Drawing.Size(1912, 880)
         Me.KilnChart.TabIndex = 0
-        ChartTitle3.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartTitle3.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kiln Operation"
-        Me.KilnChart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle3})
+        ChartTitle4.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartTitle4.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kiln Operation"
+        Me.KilnChart.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle4})
         '
         'TabNavigationPage4
         '
         Me.TabNavigationPage4.Caption = "Historian"
+        Me.TabNavigationPage4.Controls.Add(Me.ProgressPanel1)
         Me.TabNavigationPage4.Controls.Add(Me.PictureBox4)
         Me.TabNavigationPage4.Controls.Add(Me.ChartHistorian)
         Me.TabNavigationPage4.Name = "TabNavigationPage4"
-        Me.TabNavigationPage4.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage4.Size = New System.Drawing.Size(1912, 880)
+        '
+        'ProgressPanel1
+        '
+        Me.ProgressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.ProgressPanel1.Appearance.Options.UseBackColor = True
+        Me.ProgressPanel1.Location = New System.Drawing.Point(884, 394)
+        Me.ProgressPanel1.LookAndFeel.SkinMaskColor = System.Drawing.Color.White
+        Me.ProgressPanel1.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ProgressPanel1.LookAndFeel.SkinName = "DevExpress Dark Style"
+        Me.ProgressPanel1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D
+        Me.ProgressPanel1.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.ProgressPanel1.Name = "ProgressPanel1"
+        Me.ProgressPanel1.Size = New System.Drawing.Size(170, 63)
+        Me.ProgressPanel1.TabIndex = 17
+        Me.ProgressPanel1.Text = "ProgressPanel1"
+        Me.ProgressPanel1.Visible = False
         '
         'PictureBox4
         '
+        Me.PictureBox4.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox4.Location = New System.Drawing.Point(1712, 15)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(172, 82)
@@ -4044,43 +4150,17 @@ Partial Class MainPage
         Me.PictureBox4.TabIndex = 16
         Me.PictureBox4.TabStop = False
         '
-        'ChartHistorian
-        '
-        Me.ChartHistorian.AppearanceNameSerializable = "Dark"
-        Me.ChartHistorian.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
-        SwiftPlotDiagram5.AxisX.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram5.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dot
-        SwiftPlotDiagram5.AxisY.VisibleInPanesSerializable = "-1"
-        SwiftPlotDiagram5.DefaultPane.BackColor = System.Drawing.Color.Black
-        Me.ChartHistorian.Diagram = SwiftPlotDiagram5
-        Me.ChartHistorian.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChartHistorian.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
-        Me.ChartHistorian.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
-        Me.ChartHistorian.Legend.Direction = DevExpress.XtraCharts.LegendDirection.LeftToRight
-        Me.ChartHistorian.Location = New System.Drawing.Point(0, 0)
-        Me.ChartHistorian.Name = "ChartHistorian"
-        Me.ChartHistorian.PaletteBaseColorNumber = 2
-        Me.ChartHistorian.PaletteName = "Default"
-        Series27.Name = "SeriesHistorian"
-        Series27.View = SwiftPlotSeriesView30
-        Me.ChartHistorian.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series27}
-        Me.ChartHistorian.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Me.ChartHistorian.Size = New System.Drawing.Size(1636, 674)
-        Me.ChartHistorian.TabIndex = 0
-        ChartTitle4.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartTitle4.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Historian Trend"
-        Me.ChartHistorian.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle4})
-        '
         'TabNavigationPage5
         '
         Me.TabNavigationPage5.Caption = "PHT"
         Me.TabNavigationPage5.Controls.Add(Me.PictureBox5)
         Me.TabNavigationPage5.Controls.Add(Me.PHTChart)
         Me.TabNavigationPage5.Name = "TabNavigationPage5"
-        Me.TabNavigationPage5.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage5.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox5
         '
+        Me.PictureBox5.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox5.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(172, 82)
@@ -4091,6 +4171,7 @@ Partial Class MainPage
         'PHTChart
         '
         Me.PHTChart.AppearanceNameSerializable = "Dark"
+        Me.PHTChart.CacheToMemory = True
         Me.PHTChart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram6.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram6.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4113,13 +4194,14 @@ Partial Class MainPage
         Me.PHTChart.Location = New System.Drawing.Point(0, 0)
         Me.PHTChart.Name = "PHTChart"
         Me.PHTChart.PaletteName = "Default"
+        Me.PHTChart.RefreshDataOnRepaint = False
         Series28.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series28.Name = "Feed (TPH)"
-        SwiftPlotSeriesView31.LineStyle.Thickness = 2
-        Series28.View = SwiftPlotSeriesView31
+        SwiftPlotSeriesView32.LineStyle.Thickness = 2
+        Series28.View = SwiftPlotSeriesView32
         Me.PHTChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series28}
-        Me.PHTChart.SeriesTemplate.View = SwiftPlotSeriesView32
-        Me.PHTChart.Size = New System.Drawing.Size(1636, 674)
+        Me.PHTChart.SeriesTemplate.View = SwiftPlotSeriesView33
+        Me.PHTChart.Size = New System.Drawing.Size(1912, 880)
         Me.PHTChart.TabIndex = 1
         ChartTitle5.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Pre-Heat Tower Operation"
@@ -4131,10 +4213,11 @@ Partial Class MainPage
         Me.TabNavigationPage6.Controls.Add(Me.PictureBox6)
         Me.TabNavigationPage6.Controls.Add(Me.CoolerChart)
         Me.TabNavigationPage6.Name = "TabNavigationPage6"
-        Me.TabNavigationPage6.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage6.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox6
         '
+        Me.PictureBox6.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox6.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(172, 82)
@@ -4145,6 +4228,7 @@ Partial Class MainPage
         'CoolerChart
         '
         Me.CoolerChart.AppearanceNameSerializable = "Dark"
+        Me.CoolerChart.CacheToMemory = True
         Me.CoolerChart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram7.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram7.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4167,13 +4251,14 @@ Partial Class MainPage
         Me.CoolerChart.Location = New System.Drawing.Point(0, 0)
         Me.CoolerChart.Name = "CoolerChart"
         Me.CoolerChart.PaletteName = "Default"
+        Me.CoolerChart.RefreshDataOnRepaint = False
         Series29.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series29.Name = "Feed (TPH)"
-        SwiftPlotSeriesView33.LineStyle.Thickness = 2
-        Series29.View = SwiftPlotSeriesView33
+        SwiftPlotSeriesView34.LineStyle.Thickness = 2
+        Series29.View = SwiftPlotSeriesView34
         Me.CoolerChart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series29}
-        Me.CoolerChart.SeriesTemplate.View = SwiftPlotSeriesView34
-        Me.CoolerChart.Size = New System.Drawing.Size(1636, 674)
+        Me.CoolerChart.SeriesTemplate.View = SwiftPlotSeriesView35
+        Me.CoolerChart.Size = New System.Drawing.Size(1912, 880)
         Me.CoolerChart.TabIndex = 17
         ChartTitle6.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle6.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Cooler Operation"
@@ -4185,10 +4270,11 @@ Partial Class MainPage
         Me.TabNavigationPage7.Controls.Add(Me.PictureBox7)
         Me.TabNavigationPage7.Controls.Add(Me.FM1Chart)
         Me.TabNavigationPage7.Name = "TabNavigationPage7"
-        Me.TabNavigationPage7.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage7.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox7
         '
+        Me.PictureBox7.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox7.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(172, 82)
@@ -4199,6 +4285,7 @@ Partial Class MainPage
         'FM1Chart
         '
         Me.FM1Chart.AppearanceNameSerializable = "Dark"
+        Me.FM1Chart.CacheToMemory = True
         Me.FM1Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram8.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram8.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4221,13 +4308,14 @@ Partial Class MainPage
         Me.FM1Chart.Location = New System.Drawing.Point(0, 0)
         Me.FM1Chart.Name = "FM1Chart"
         Me.FM1Chart.PaletteName = "Default"
+        Me.FM1Chart.RefreshDataOnRepaint = False
         Series30.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series30.Name = "Feed (TPH)"
-        SwiftPlotSeriesView35.LineStyle.Thickness = 2
-        Series30.View = SwiftPlotSeriesView35
+        SwiftPlotSeriesView36.LineStyle.Thickness = 2
+        Series30.View = SwiftPlotSeriesView36
         Me.FM1Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series30}
-        Me.FM1Chart.SeriesTemplate.View = SwiftPlotSeriesView36
-        Me.FM1Chart.Size = New System.Drawing.Size(1636, 674)
+        Me.FM1Chart.SeriesTemplate.View = SwiftPlotSeriesView37
+        Me.FM1Chart.Size = New System.Drawing.Size(1912, 880)
         Me.FM1Chart.TabIndex = 17
         ChartTitle7.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle7.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 1 Operation"
@@ -4239,10 +4327,11 @@ Partial Class MainPage
         Me.TabNavigationPage8.Controls.Add(Me.PictureBox8)
         Me.TabNavigationPage8.Controls.Add(Me.FM2Chart)
         Me.TabNavigationPage8.Name = "TabNavigationPage8"
-        Me.TabNavigationPage8.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage8.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox8
         '
+        Me.PictureBox8.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox8.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(172, 82)
@@ -4253,6 +4342,7 @@ Partial Class MainPage
         'FM2Chart
         '
         Me.FM2Chart.AppearanceNameSerializable = "Dark"
+        Me.FM2Chart.CacheToMemory = True
         Me.FM2Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram9.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram9.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4275,13 +4365,14 @@ Partial Class MainPage
         Me.FM2Chart.Location = New System.Drawing.Point(0, 0)
         Me.FM2Chart.Name = "FM2Chart"
         Me.FM2Chart.PaletteName = "Default"
+        Me.FM2Chart.RefreshDataOnRepaint = False
         Series31.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series31.Name = "Feed (TPH)"
-        SwiftPlotSeriesView37.LineStyle.Thickness = 2
-        Series31.View = SwiftPlotSeriesView37
+        SwiftPlotSeriesView38.LineStyle.Thickness = 2
+        Series31.View = SwiftPlotSeriesView38
         Me.FM2Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series31}
-        Me.FM2Chart.SeriesTemplate.View = SwiftPlotSeriesView38
-        Me.FM2Chart.Size = New System.Drawing.Size(1636, 674)
+        Me.FM2Chart.SeriesTemplate.View = SwiftPlotSeriesView39
+        Me.FM2Chart.Size = New System.Drawing.Size(1912, 880)
         Me.FM2Chart.TabIndex = 19
         ChartTitle8.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle8.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 2 Operation"
@@ -4293,10 +4384,11 @@ Partial Class MainPage
         Me.TabNavigationPage9.Controls.Add(Me.PictureBox9)
         Me.TabNavigationPage9.Controls.Add(Me.FM3Chart)
         Me.TabNavigationPage9.Name = "TabNavigationPage9"
-        Me.TabNavigationPage9.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage9.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox9
         '
+        Me.PictureBox9.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox9.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(172, 82)
@@ -4307,6 +4399,7 @@ Partial Class MainPage
         'FM3Chart
         '
         Me.FM3Chart.AppearanceNameSerializable = "Dark"
+        Me.FM3Chart.CacheToMemory = True
         Me.FM3Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram10.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram10.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4329,13 +4422,14 @@ Partial Class MainPage
         Me.FM3Chart.Location = New System.Drawing.Point(0, 0)
         Me.FM3Chart.Name = "FM3Chart"
         Me.FM3Chart.PaletteName = "Default"
+        Me.FM3Chart.RefreshDataOnRepaint = False
         Series32.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series32.Name = "Feed (TPH)"
-        SwiftPlotSeriesView39.LineStyle.Thickness = 2
-        Series32.View = SwiftPlotSeriesView39
+        SwiftPlotSeriesView40.LineStyle.Thickness = 2
+        Series32.View = SwiftPlotSeriesView40
         Me.FM3Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series32}
-        Me.FM3Chart.SeriesTemplate.View = SwiftPlotSeriesView40
-        Me.FM3Chart.Size = New System.Drawing.Size(1636, 674)
+        Me.FM3Chart.SeriesTemplate.View = SwiftPlotSeriesView41
+        Me.FM3Chart.Size = New System.Drawing.Size(1912, 880)
         Me.FM3Chart.TabIndex = 19
         ChartTitle9.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle9.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 3 Operation"
@@ -4347,10 +4441,11 @@ Partial Class MainPage
         Me.TabNavigationPage10.Controls.Add(Me.PictureBox10)
         Me.TabNavigationPage10.Controls.Add(Me.FM4Chart)
         Me.TabNavigationPage10.Name = "TabNavigationPage10"
-        Me.TabNavigationPage10.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage10.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox10
         '
+        Me.PictureBox10.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox10.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(172, 82)
@@ -4361,6 +4456,7 @@ Partial Class MainPage
         'FM4Chart
         '
         Me.FM4Chart.AppearanceNameSerializable = "Dark"
+        Me.FM4Chart.CacheToMemory = True
         Me.FM4Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram11.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram11.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4383,13 +4479,14 @@ Partial Class MainPage
         Me.FM4Chart.Location = New System.Drawing.Point(0, 0)
         Me.FM4Chart.Name = "FM4Chart"
         Me.FM4Chart.PaletteName = "Default"
+        Me.FM4Chart.RefreshDataOnRepaint = False
         Series33.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series33.Name = "Feed (TPH)"
-        SwiftPlotSeriesView41.LineStyle.Thickness = 2
-        Series33.View = SwiftPlotSeriesView41
+        SwiftPlotSeriesView42.LineStyle.Thickness = 2
+        Series33.View = SwiftPlotSeriesView42
         Me.FM4Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series33}
-        Me.FM4Chart.SeriesTemplate.View = SwiftPlotSeriesView42
-        Me.FM4Chart.Size = New System.Drawing.Size(1636, 674)
+        Me.FM4Chart.SeriesTemplate.View = SwiftPlotSeriesView43
+        Me.FM4Chart.Size = New System.Drawing.Size(1912, 880)
         Me.FM4Chart.TabIndex = 19
         ChartTitle10.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle10.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 4 Operation"
@@ -4401,10 +4498,11 @@ Partial Class MainPage
         Me.TabNavigationPage11.Controls.Add(Me.PictureBox11)
         Me.TabNavigationPage11.Controls.Add(Me.FM5Chart)
         Me.TabNavigationPage11.Name = "TabNavigationPage11"
-        Me.TabNavigationPage11.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage11.Size = New System.Drawing.Size(1912, 880)
         '
         'PictureBox11
         '
+        Me.PictureBox11.Image = Global.Midlothian_Operations.My.Resources.Resources.martinmarietta
         Me.PictureBox11.Location = New System.Drawing.Point(1705, 16)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(172, 82)
@@ -4415,6 +4513,7 @@ Partial Class MainPage
         'FM5Chart
         '
         Me.FM5Chart.AppearanceNameSerializable = "Dark"
+        Me.FM5Chart.CacheToMemory = True
         Me.FM5Chart.DataSource = Me.LDMS7_MIDDataSet.LabData_FinishMill
         SwiftPlotDiagram12.AxisX.DateTimeScaleOptions.MeasureUnit = DevExpress.XtraCharts.DateTimeMeasureUnit.Second
         SwiftPlotDiagram12.AxisX.DateTimeScaleOptions.ScaleMode = DevExpress.XtraCharts.ScaleMode.Manual
@@ -4437,13 +4536,14 @@ Partial Class MainPage
         Me.FM5Chart.Location = New System.Drawing.Point(0, 0)
         Me.FM5Chart.Name = "FM5Chart"
         Me.FM5Chart.PaletteName = "Default"
+        Me.FM5Chart.RefreshDataOnRepaint = False
         Series34.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series34.Name = "Feed (TPH)"
-        SwiftPlotSeriesView43.LineStyle.Thickness = 2
-        Series34.View = SwiftPlotSeriesView43
+        SwiftPlotSeriesView44.LineStyle.Thickness = 2
+        Series34.View = SwiftPlotSeriesView44
         Me.FM5Chart.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series34}
-        Me.FM5Chart.SeriesTemplate.View = SwiftPlotSeriesView44
-        Me.FM5Chart.Size = New System.Drawing.Size(1636, 674)
+        Me.FM5Chart.SeriesTemplate.View = SwiftPlotSeriesView45
+        Me.FM5Chart.Size = New System.Drawing.Size(1912, 880)
         Me.FM5Chart.TabIndex = 19
         ChartTitle11.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartTitle11.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finish Mill # 5 Operation"
@@ -4453,7 +4553,7 @@ Partial Class MainPage
         '
         Me.TabNavigationPage12.Caption = "Quality"
         Me.TabNavigationPage12.Name = "TabNavigationPage12"
-        Me.TabNavigationPage12.Size = New System.Drawing.Size(1636, 674)
+        Me.TabNavigationPage12.Size = New System.Drawing.Size(1912, 880)
         '
         'tmrUpdateRealTime
         '
@@ -4586,6 +4686,11 @@ Partial Class MainPage
         Me.BarEditItem4.Id = 386
         Me.BarEditItem4.Name = "BarEditItem4"
         '
+        'bgwUpdateHistorian
+        '
+        Me.bgwUpdateHistorian.WorkerReportsProgress = True
+        Me.bgwUpdateHistorian.WorkerSupportsCancellation = True
+        '
         'MainPage
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -4593,7 +4698,7 @@ Partial Class MainPage
         Me.Appearance.Options.UseBackColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1654, 893)
+        Me.ClientSize = New System.Drawing.Size(1930, 1099)
         Me.Controls.Add(Me.CCh)
         Me.Controls.Add(Me.ribbonStatusBar)
         Me.Controls.Add(Me.ribbonControl)
@@ -4602,6 +4707,13 @@ Partial Class MainPage
         Me.StatusBar = Me.ribbonStatusBar
         Me.Text = "Midlothian - Plant Operations"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.DateTimeChartRangeControlClient1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartHistorian, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarAndDockingController1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.navbarImageCollectionLarge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.navbarImageCollection, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4612,11 +4724,13 @@ Partial Class MainPage
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ribbonImageCollectionLarge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemFontEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemSpreadsheetFontSizeEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemPopupGalleryEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemTextEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CommandBarGalleryDropDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CommandBarGalleryDropDown2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CommandBarGalleryDropDown3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4662,28 +4776,27 @@ Partial Class MainPage
         CType(Me.DigitalBackgroundLayerComponent10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage1.ResumeLayout(False)
         Me.TabNavigationPage1.PerformLayout()
-        CType(SwiftPlotDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM6Chart2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LDMS7_MIDDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotDiagram3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM6Chart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DigitalGauge22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DigitalBackgroundLayerComponent29, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4719,26 +4832,26 @@ Partial Class MainPage
         CType(SwiftPlotDiagramSecondaryAxisY10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotDiagram3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotDiagram4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VRMChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage3.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4752,89 +4865,86 @@ Partial Class MainPage
         CType(SwiftPlotDiagramSecondaryAxisY20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagramSecondaryAxisY22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotDiagram4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotDiagram5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView20, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView21, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView23, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView24, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView25, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView26, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series25, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series25, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series26, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series27, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KilnChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage4.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotDiagram5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartHistorian, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage5.ResumeLayout(False)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series28, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PHTChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage6.ResumeLayout(False)
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series29, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView35, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CoolerChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage7.ResumeLayout(False)
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView37, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM1Chart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage8.ResumeLayout(False)
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM2Chart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage9.ResumeLayout(False)
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView41, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM3Chart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage10.ResumeLayout(False)
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView41, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series33, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView43, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM4Chart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabNavigationPage11.ResumeLayout(False)
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotDiagram12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SwiftPlotSeriesView43, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SwiftPlotSeriesView44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SwiftPlotSeriesView45, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FM5Chart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HistoryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnalogHistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AnalogHistoryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StyleController1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -5060,4 +5170,12 @@ Partial Class MainPage
     Friend WithEvents tmrError As Timer
     Friend WithEvents BarEditItem3 As BarEditItem
     Friend WithEvents BarEditItem4 As BarEditItem
+    Friend WithEvents RepositoryItemTextEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents DateTimeChartRangeControlClient1 As DevExpress.XtraEditors.DateTimeChartRangeControlClient
+    Friend WithEvents BarEditItem5 As BarEditItem
+    Friend WithEvents RepositoryItemComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
+    Friend WithEvents ProgressPanel1 As DevExpress.XtraWaitForm.ProgressPanel
+    Friend WithEvents StyleController1 As DevExpress.XtraEditors.StyleController
+    Friend WithEvents bgwUpdateHistorian As System.ComponentModel.BackgroundWorker
+    'Friend WithEvents bgwHistorian As System.ComponentModel.BackgroundWorker
 End Class
